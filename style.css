@@ -14,25 +14,23 @@
 }
 
 *{
-  box-sizing:border-box;
+  box-sizing:border-box
 }
 
 body{
   margin:0;
   font-family:Poppins,Arial,sans-serif;
   background:var(--bg);
-  color:var(--text);
+  color:var(--text)
 }
 
-button,
-input,
-select{
-  font:inherit;
+button,input,select{
+  font:inherit
 }
 
 .app{
   display:flex;
-  min-height:100vh;
+  min-height:100vh
 }
 
 .sidebar{
@@ -44,17 +42,28 @@ select{
   left:0;
   top:0;
   bottom:0;
-  z-index:5;
+  z-index:5
 }
+
+
+/* ================= LOGO ================= */
 
 .logo{
   display:flex;
   align-items:center;
-  gap:11px;
-  padding:5px 10px 28px;
-  font-weight:700;
-  font-size:18px;
+  padding:5px 10px 28px
 }
+
+.logo img {
+    width: 190px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+
+}
+
+
+/* ================= NAV ================= */
 
 .logo-mark{
   width:36px;
@@ -64,7 +73,7 @@ select{
   display:grid;
   place-items:center;
   color:var(--navy);
-  font-weight:800;
+  font-weight:800
 }
 
 .brand-dot{
@@ -73,7 +82,7 @@ select{
   border-radius:50%;
   background:var(--cyan);
   display:inline-block;
-  margin-left:2px;
+  margin-left:2px
 }
 
 .nav-label{
@@ -81,13 +90,13 @@ select{
   color:#7990a8;
   text-transform:uppercase;
   letter-spacing:1.2px;
-  padding:8px 12px;
+  padding:8px 12px
 }
 
 .nav{
   display:flex;
   flex-direction:column;
-  gap:4px;
+  gap:4px
 }
 
 .nav button{
@@ -101,47 +110,47 @@ select{
   display:flex;
   align-items:center;
   gap:12px;
-  font-size:13px;
+  font-size:13px
 }
 
 .nav button:hover,
 .nav button.active{
   background:rgba(14,188,215,.14);
-  color:#fff;
+  color:#fff
 }
 
 .nav button.active{
-  box-shadow:inset 3px 0 0 var(--cyan);
+  box-shadow:inset 3px 0 0 var(--cyan)
 }
 
 .icon{
   width:20px;
   text-align:center;
-  font-size:16px;
+  font-size:16px
 }
 
 .sidebar-bottom{
   position:absolute;
   bottom:18px;
   left:16px;
-  right:16px;
+  right:16px
 }
 
 .upgrade{
   background:linear-gradient(135deg,#11355b,#0d6071);
   padding:15px;
   border-radius:13px;
-  margin-bottom:12px;
+  margin-bottom:12px
 }
 
 .upgrade b{
-  font-size:12px;
+  font-size:12px
 }
 
 .upgrade p{
   font-size:10px;
   color:#b9d2df;
-  margin:5px 0 12px;
+  margin:5px 0 12px
 }
 
 .upgrade button{
@@ -151,13 +160,16 @@ select{
   padding:7px 10px;
   border-radius:8px;
   font-size:11px;
-  font-weight:600;
+  font-weight:600
 }
+
+
+/* ================= MAIN ================= */
 
 .main{
   margin-left:var(--sidebar);
   width:calc(100% - var(--sidebar));
-  min-width:0;
+  min-width:0
 }
 
 .topbar{
@@ -170,7 +182,7 @@ select{
   padding:0 30px;
   position:sticky;
   top:0;
-  z-index:4;
+  z-index:4
 }
 
 .search{
@@ -183,7 +195,7 @@ select{
   border-radius:10px;
   padding:9px 13px;
   width:280px;
-  font-size:12px;
+  font-size:12px
 }
 
 .search input{
@@ -191,18 +203,18 @@ select{
   background:transparent;
   outline:0;
   width:100%;
-  font-size:12px;
+  font-size:12px
 }
 
 .top-actions{
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:18px
 }
 
 .bell{
   font-size:18px;
-  position:relative;
+  position:relative
 }
 
 .bell:after{
@@ -213,13 +225,13 @@ select{
   background:var(--cyan);
   position:absolute;
   right:-2px;
-  top:0;
+  top:0
 }
 
 .profile{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:10px
 }
 
 .avatar{
@@ -231,43 +243,46 @@ select{
   display:grid;
   place-items:center;
   font-size:12px;
-  font-weight:600;
+  font-weight:600
 }
 
 .profile small{
   display:block;
   color:var(--muted);
-  font-size:10px;
+  font-size:10px
 }
 
+
+/* ================= CONTENT ================= */
+
 .content{
-  padding:28px 30px 45px;
+  padding:28px 30px 45px
 }
 
 .page{
-  display:none;
+  display:none
 }
 
 .page.active{
-  display:block;
+  display:block
 }
 
 .heading{
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
-  margin-bottom:24px;
+  margin-bottom:24px
 }
 
 .heading h1{
   margin:0;
-  font-size:24px;
+  font-size:24px
 }
 
 .heading p{
   margin:5px 0 0;
   color:var(--muted);
-  font-size:12px;
+  font-size:12px
 }
 
 .primary{
@@ -278,14 +293,17 @@ select{
   padding:10px 15px;
   font-weight:600;
   font-size:12px;
-  cursor:pointer;
+  cursor:pointer
 }
+
+
+/* ================= CARDS ================= */
 
 .cards{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:16px;
-  margin-bottom:18px;
+  margin-bottom:18px
 }
 
 .card{
@@ -293,33 +311,33 @@ select{
   border:1px solid var(--line);
   border-radius:14px;
   padding:18px;
-  box-shadow:0 2px 9px rgba(9,25,46,.025);
+  box-shadow:0 2px 9px rgba(9,25,46,.025)
 }
 
 .stat{
   display:flex;
   justify-content:space-between;
-  align-items:flex-start;
+  align-items:flex-start
 }
 
 .stat .label{
   font-size:11px;
-  color:var(--muted);
+  color:var(--muted)
 }
 
 .stat h2{
   font-size:22px;
-  margin:8px 0 5px;
+  margin:8px 0 5px
 }
 
 .trend{
   font-size:10px;
   color:var(--green);
-  font-weight:600;
+  font-weight:600
 }
 
 .trend.down{
-  color:var(--red);
+  color:var(--red)
 }
 
 .mini-icon{
@@ -330,31 +348,34 @@ select{
   color:var(--teal);
   display:grid;
   place-items:center;
-  font-size:15px;
+  font-size:15px
 }
+
+
+/* ================= GRID ================= */
 
 .grid2{
   display:grid;
   grid-template-columns:1.65fr 1fr;
-  gap:18px;
+  gap:18px
 }
 
 .grid3{
   display:grid;
   grid-template-columns:1.15fr 1fr 1fr;
-  gap:18px;
+  gap:18px
 }
 
 .card-title{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:15px;
+  margin-bottom:15px
 }
 
 .card-title h3{
   font-size:14px;
-  margin:0;
+  margin:0
 }
 
 .card-title span,
@@ -364,13 +385,16 @@ select{
   background:#f6f8fa;
   border:1px solid var(--line);
   padding:6px 8px;
-  border-radius:7px;
+  border-radius:7px
 }
+
+
+/* ================= CHART ================= */
 
 .chart{
   height:230px;
   position:relative;
-  padding:10px 0 0;
+  padding:10px 0 0
 }
 
 .bars{
@@ -385,7 +409,7 @@ select{
     transparent 0,
     transparent 45px,
     #eef2f5 46px
-  );
+  )
 }
 
 .bar-group{
@@ -393,19 +417,19 @@ select{
   flex:1;
   display:flex;
   align-items:flex-end;
-  gap:5px;
+  gap:5px
 }
 
 .bar{
   flex:1;
   border-radius:5px 5px 0 0;
   background:var(--cyan);
-  opacity:.88;
+  opacity:.88
 }
 
 .bar.alt{
   background:var(--teal);
-  opacity:.72;
+  opacity:.72
 }
 
 .months{
@@ -413,14 +437,14 @@ select{
   justify-content:space-around;
   color:#8b98a7;
   font-size:9px;
-  padding:7px 8px;
+  padding:7px 8px
 }
 
 .legend{
   display:flex;
   gap:14px;
   font-size:9px;
-  color:var(--muted);
+  color:var(--muted)
 }
 
 .dot{
@@ -429,17 +453,20 @@ select{
   height:7px;
   border-radius:2px;
   margin-right:4px;
-  background:var(--cyan);
+  background:var(--cyan)
 }
 
 .dot.teal{
-  background:var(--teal);
+  background:var(--teal)
 }
+
+
+/* ================= DONUT ================= */
 
 .donut-wrap{
   display:flex;
   align-items:center;
-  gap:22px;
+  gap:22px
 }
 
 .donut{
@@ -453,7 +480,7 @@ select{
     #dfe9ee 84% 100%
   );
   display:grid;
-  place-items:center;
+  place-items:center
 }
 
 .donut:after{
@@ -461,18 +488,18 @@ select{
   width:86px;
   height:86px;
   background:#fff;
-  border-radius:50%;
+  border-radius:50%
 }
 
 .legend-list{
   font-size:10px;
   line-height:2.25;
-  color:var(--muted);
+  color:var(--muted)
 }
 
 .legend-list b{
   color:var(--text);
-  font-weight:600;
+  font-weight:600
 }
 
 .legend-list i{
@@ -481,59 +508,65 @@ select{
   height:7px;
   border-radius:50%;
   margin-right:6px;
-  background:var(--cyan);
+  background:var(--cyan)
 }
 
 .legend-list i.t{
-  background:var(--teal);
+  background:var(--teal)
 }
 
 .legend-list i.l{
-  background:#9fd9dc;
+  background:#9fd9dc
 }
 
 .legend-list i.g{
-  background:#dfe9ee;
+  background:#dfe9ee
 }
+
+
+/* ================= AI ================= */
 
 .ai{
   background:linear-gradient(135deg,#09192e,#103e59);
   color:#fff;
-  border:0;
+  border:0
 }
 
 .ai .card-title span{
   background:rgba(14,188,215,.12);
   color:#8feaf2;
-  border-color:rgba(14,188,215,.2);
+  border-color:rgba(14,188,215,.2)
 }
 
 .insight{
   padding:11px 0;
   border-top:1px solid rgba(255,255,255,.1);
   font-size:10px;
-  color:#c9d9e5;
+  color:#c9d9e5
 }
 
 .insight b{
-  color:#fff;
+  color:#fff
 }
 
 .insight:first-of-type{
-  border-top:0;
+  border-top:0
 }
 
 .insight .tag{
   color:#7de7ef;
   font-size:9px;
   text-transform:uppercase;
-  letter-spacing:.6px;
+  letter-spacing:.6px
 }
+
+
+/* ================= ACTIVITY ================= */
 
 .activity{
   display:flex;
   flex-direction:column;
-  gap:12px;
+  gap:12px
 }
 
 .activity-row{
@@ -541,13 +574,13 @@ select{
   justify-content:space-between;
   align-items:center;
   padding:9px 0;
-  border-bottom:1px solid #eef2f5;
+  border-bottom:1px solid #eef2f5
 }
 
 .person{
   display:flex;
   align-items:center;
-  gap:9px;
+  gap:9px
 }
 
 .tiny{
@@ -559,42 +592,48 @@ select{
   place-items:center;
   font-size:10px;
   color:var(--teal);
-  font-weight:600;
+  font-weight:600
 }
 
 .activity-row small{
   font-size:9px;
-  color:var(--muted);
+  color:var(--muted)
 }
+
+
+/* ================= STATUS ================= */
 
 .status{
   font-size:9px;
   padding:5px 7px;
-  border-radius:20px;
+  border-radius:20px
 }
 
 .paid{
   background:#e9f8f1;
-  color:var(--green);
+  color:var(--green)
 }
 
 .pending{
   background:#fff6e8;
-  color:var(--amber);
+  color:var(--amber)
 }
 
 .failed{
   background:#fff0f0;
-  color:var(--red);
+  color:var(--red)
 }
 
+
+/* ================= TABLE ================= */
+
 .table-card{
-  margin-top:18px;
+  margin-top:18px
 }
 
 .toolbar{
   display:flex;
-  gap:9px;
+  gap:9px
 }
 
 .toolbar input{
@@ -602,13 +641,13 @@ select{
   padding:8px 10px;
   border-radius:8px;
   font-size:11px;
-  outline:0;
+  outline:0
 }
 
 .table{
   width:100%;
   border-collapse:collapse;
-  font-size:11px;
+  font-size:11px
 }
 
 .table th{
@@ -617,18 +656,18 @@ select{
   font-size:9px;
   font-weight:500;
   padding:11px;
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid var(--line)
 }
 
 .table td{
   padding:12px 11px;
-  border-bottom:1px solid #f0f3f6;
+  border-bottom:1px solid #f0f3f6
 }
 
 .emp{
   display:flex;
   align-items:center;
-  gap:9px;
+  gap:9px
 }
 
 .emp .avatar{
@@ -636,58 +675,64 @@ select{
   height:29px;
   font-size:9px;
   background:#eaf7f8;
-  color:var(--teal);
+  color:var(--teal)
 }
+
+
+/* ================= KPI ================= */
 
 .kpi-line{
   height:8px;
   background:#edf2f5;
   border-radius:8px;
-  overflow:hidden;
+  overflow:hidden
 }
 
 .kpi-line span{
   display:block;
   height:100%;
   background:var(--cyan);
-  border-radius:8px;
+  border-radius:8px
 }
 
 .forecast{
   font-size:27px;
   font-weight:700;
-  margin:8px 0;
+  margin:8px 0
 }
 
 .muted{
   font-size:10px;
-  color:var(--muted);
+  color:var(--muted)
 }
 
 .metric-row{
   display:flex;
   justify-content:space-between;
   font-size:10px;
-  margin:12px 0 6px;
+  margin:12px 0 6px
 }
 
 .metric-row b{
-  font-size:10px;
+  font-size:10px
 }
+
+
+/* ================= REPORTS ================= */
 
 .report-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:15px;
+  gap:15px
 }
 
 .report-card{
-  cursor:pointer;
+  cursor:pointer
 }
 
 .report-card:hover{
   transform:translateY(-2px);
-  transition:.2s;
+  transition:.2s
 }
 
 .report-card .r-icon{
@@ -698,19 +743,22 @@ select{
   display:grid;
   place-items:center;
   color:var(--teal);
-  margin-bottom:13px;
+  margin-bottom:13px
 }
 
 .report-card h3{
   font-size:12px;
-  margin:0 0 4px;
+  margin:0 0 4px
 }
 
 .report-card p{
   font-size:10px;
   color:var(--muted);
-  margin:0;
+  margin:0
 }
+
+
+/* ================= TOAST ================= */
 
 .toast{
   position:fixed;
@@ -724,90 +772,109 @@ select{
   opacity:0;
   transform:translateY(10px);
   transition:.25s;
-  z-index:20;
+  z-index:20
 }
 
 .toast.show{
   opacity:1;
-  transform:none;
+  transform:none
 }
+
+
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:1050px){
 
   .cards{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr)
   }
 
   .grid2,
   .grid3{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr
   }
 
   .report-grid{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr)
   }
 
 }
 
+
 @media(max-width:760px){
 
   :root{
-    --sidebar:0px;
+    --sidebar:0px
   }
 
   .sidebar{
     width:230px;
     transform:translateX(-100%);
-    transition:.25s;
+    transition:.25s
   }
 
   .sidebar.open{
-    transform:none;
+    transform:none
   }
 
   .main{
     margin-left:0;
-    width:100%;
+    width:100%
   }
 
   .menu{
-    display:block!important;
+    display:block!important
   }
 
   .topbar{
-    padding:0 16px;
+    padding:0 16px
   }
 
   .search{
-    width:180px;
+    width:180px
   }
 
   .content{
-    padding:20px 15px;
+    padding:20px 15px
   }
 
   .cards{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr
   }
 
   .report-grid{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr
   }
 
   .heading{
-    align-items:center;
+    align-items:center
   }
 
   .heading h1{
-    font-size:20px;
+    font-size:20px
   }
 
 }
+
 
 .menu{
   display:none;
   border:0;
   background:none;
   font-size:20px;
-  margin-right:8px;
+  margin-right:8px
+}
+
+.brand-logo {
+    width: 220px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 190px;
+    height: auto;
+    display: block;
 }
