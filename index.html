@@ -1,116 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>PayrollPixel AI</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
 </head>
+
 
 <body>
 
+
 <div class="app">
 
-    <!-- ================= SIDEBAR ================= -->
 
-    <aside class="sidebar" id="sidebar">
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <!-- LOGO -->
 
         <div class="logo">
-            <img src="./payroll-logo.png" alt="PayrollPixel AI">
+
+            <img
+                src="./payroll-logo.png"
+                alt="PayrollPixel AI"
+            >
+
         </div>
 
-        <div class="nav-label">Workspace</div>
+
+        <!-- WORKSPACE -->
+
+        <div class="nav-label">
+            Workspace
+        </div>
+
 
         <nav class="nav">
 
-            <button class="active" data-page="dashboard">
-                <span class="icon">▦</span>
+
+            <!-- DASHBOARD -->
+
+            <button
+                class="active"
+                data-page="dashboard"
+            >
+
+                <span class="icon">
+                    ▦
+                </span>
+
                 Dashboard
+
             </button>
 
-            <button data-page="employees">
-                <span class="icon">♙</span>
+
+            <!-- PEOPLE -->
+
+            <button
+                data-page="employees"
+            >
+
+                <span class="icon">
+                    ♙
+                </span>
+
                 People
+
             </button>
 
-            <button data-page="payroll">
-                <span class="icon">₹</span>
+
+            <!-- PAYROLL -->
+
+            <button
+                data-page="payroll"
+            >
+
+                <span class="icon">
+                    ₹
+                </span>
+
                 Payroll
+
             </button>
 
-            <button data-page="reports">
-                <span class="icon">▤</span>
-                Reports
+
+            <!-- REPORTS & ANALYSIS -->
+
+            <button
+                data-page="reports"
+            >
+
+                <span class="icon">
+                    ▤
+                </span>
+
+                Reports & Analysis
+
             </button>
 
-            <button data-page="ai">
-                <span class="icon">✦</span>
-                AI Forecasting
-            </button>
 
             <!-- AI AGENT -->
-            <button data-page="ai-agent">
-                <span class="icon">✧</span>
+
+            <button
+                data-page="ai-agent"
+            >
+
+                <span class="icon">
+                    ✧
+                </span>
+
                 AI Agent
+
             </button>
+
 
         </nav>
 
-        <div class="nav-label">Manage</div>
+
+        <!-- MANAGE -->
+
+        <div class="nav-label">
+            Manage
+        </div>
+
 
         <nav class="nav">
 
-            <button data-page="settings">
-                <span class="icon">⚙</span>
+
+            <button
+                data-page="settings"
+            >
+
+                <span class="icon">
+                    ⚙
+                </span>
+
                 Settings
+
             </button>
+
 
         </nav>
 
+
+        <!-- SIDEBAR BOTTOM -->
 
         <div class="sidebar-bottom">
 
+
             <div class="upgrade">
 
-                <b>Unlock PayrollPixel AI</b>
+                <b>
+                    Unlock PayrollPixel AI
+                </b>
 
                 <p>
                     Automate payroll insights and workforce decisions.
                 </p>
 
-                <button onclick="toast('Demo mode — technical integration comes later')">
+                <button
+                    onclick="toast('Demo mode — technical integration comes later')"
+                >
                     Upgrade
                 </button>
 
             </div>
 
+
         </div>
+
 
     </aside>
 
 
-    <!-- ================= MAIN ================= -->
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
 
     <main class="main">
 
-        <!-- TOPBAR -->
+
+        <!-- =================================================
+             TOPBAR
+             ================================================= -->
 
         <header class="topbar">
 
-            <div style="display:flex;align-items:center;">
 
-                <button class="menu" id="menu">
+            <div
+                style="display:flex;align-items:center;"
+            >
+
+
+                <button
+                    class="menu"
+                    id="menu"
+                >
                     ☰
                 </button>
 
+
                 <div class="search">
 
-                    <span>⌕</span>
+                    <span>
+                        ⌕
+                    </span>
 
                     <input
                         type="text"
@@ -120,22 +251,28 @@
 
                 </div>
 
+
             </div>
 
 
             <div class="top-actions">
 
+
                 <div class="bell">
                     ♢
                 </div>
 
+
                 <div class="profile">
+
 
                     <div class="avatar">
                         AK
                     </div>
 
+
                     <div>
+
                         <b style="font-size:11px;">
                             Ankit Kumar
                         </b>
@@ -143,143 +280,295 @@
                         <small>
                             Administrator
                         </small>
+
                     </div>
+
 
                 </div>
 
+
             </div>
+
 
         </header>
 
 
-        <!-- ================= CONTENT ================= -->
+
+        <!-- =================================================
+             CONTENT
+             ================================================= -->
 
         <section class="content">
 
 
-            <!-- ================= DASHBOARD ================= -->
+            <!-- =================================================
+                 DASHBOARD
+                 ================================================= -->
 
-            <div class="page active" id="page-dashboard">
+            <div
+                class="page active"
+                id="page-dashboard"
+            >
+
 
                 <div class="heading">
 
+
                     <div>
-                        <h1>Dashboard</h1>
+
+                        <h1>
+                            Dashboard
+                        </h1>
 
                         <p>
                             Overview of your payroll and workforce
                         </p>
+
                     </div>
 
-                    <button class="primary" onclick="toast('Payroll processing started')">
+
+                    <button
+                        class="primary"
+                        onclick="toast('Payroll processing started')"
+                    >
+
                         + Run Payroll
+
                     </button>
+
 
                 </div>
 
+
+
+                <!-- STAT CARDS -->
 
                 <div class="cards">
 
-                    <div class="card stat">
-
-                        <div>
-                            <div class="label">Total Employees</div>
-                            <h2>248</h2>
-                            <div class="trend">+4.2% this month</div>
-                        </div>
-
-                        <div class="mini-icon">♙</div>
-
-                    </div>
-
 
                     <div class="card stat">
 
                         <div>
-                            <div class="label">Monthly Payroll</div>
-                            <h2>₹42.8L</h2>
-                            <div class="trend">+2.8%</div>
+
+                            <div class="label">
+                                Total Employees
+                            </div>
+
+                            <h2>
+                                248
+                            </h2>
+
+                            <div class="trend">
+                                +4.2% this month
+                            </div>
+
                         </div>
 
-                        <div class="mini-icon">₹</div>
+                        <div class="mini-icon">
+                            ♙
+                        </div>
 
                     </div>
 
-
-                    <div class="card stat">
-
-                        <div>
-                            <div class="label">Avg. Salary</div>
-                            <h2>₹68.4K</h2>
-                            <div class="trend">+1.4%</div>
-                        </div>
-
-                        <div class="mini-icon">◉</div>
-
-                    </div>
 
 
                     <div class="card stat">
 
                         <div>
-                            <div class="label">Payroll Accuracy</div>
-                            <h2>98.7%</h2>
-                            <div class="trend">+0.8%</div>
+
+                            <div class="label">
+                                Monthly Payroll
+                            </div>
+
+                            <h2>
+                                ₹42.8L
+                            </h2>
+
+                            <div class="trend">
+                                +2.8%
+                            </div>
+
                         </div>
 
-                        <div class="mini-icon">✓</div>
+                        <div class="mini-icon">
+                            ₹
+                        </div>
 
                     </div>
+
+
+
+                    <div class="card stat">
+
+                        <div>
+
+                            <div class="label">
+                                Avg. Salary
+                            </div>
+
+                            <h2>
+                                ₹68.4K
+                            </h2>
+
+                            <div class="trend">
+                                +1.4%
+                            </div>
+
+                        </div>
+
+                        <div class="mini-icon">
+                            ◉
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="card stat">
+
+                        <div>
+
+                            <div class="label">
+                                Payroll Accuracy
+                            </div>
+
+                            <h2>
+                                98.7%
+                            </h2>
+
+                            <div class="trend">
+                                +0.8%
+                            </div>
+
+                        </div>
+
+                        <div class="mini-icon">
+                            ✓
+                        </div>
+
+                    </div>
+
 
                 </div>
 
 
+
+                <!-- PAYROLL OVERVIEW + WORKFORCE -->
+
                 <div class="grid2">
+
 
                     <div class="card">
 
+
                         <div class="card-title">
 
-                            <h3>Payroll Overview</h3>
+                            <h3>
+                                Payroll Overview
+                            </h3>
 
-                            <span>2026</span>
+                            <span>
+                                2026
+                            </span>
 
                         </div>
 
 
                         <div class="chart">
 
+
                             <div class="bars">
 
-                                <div class="bar-group">
-                                    <div class="bar" style="height:52%"></div>
-                                    <div class="bar alt" style="height:42%"></div>
-                                </div>
 
                                 <div class="bar-group">
-                                    <div class="bar" style="height:62%"></div>
-                                    <div class="bar alt" style="height:52%"></div>
+
+                                    <div
+                                        class="bar"
+                                        style="height:52%"
+                                    ></div>
+
+                                    <div
+                                        class="bar alt"
+                                        style="height:42%"
+                                    ></div>
+
                                 </div>
 
-                                <div class="bar-group">
-                                    <div class="bar" style="height:67%"></div>
-                                    <div class="bar alt" style="height:57%"></div>
-                                </div>
 
                                 <div class="bar-group">
-                                    <div class="bar" style="height:74%"></div>
-                                    <div class="bar alt" style="height:61%"></div>
+
+                                    <div
+                                        class="bar"
+                                        style="height:62%"
+                                    ></div>
+
+                                    <div
+                                        class="bar alt"
+                                        style="height:52%"
+                                    ></div>
+
                                 </div>
 
-                                <div class="bar-group">
-                                    <div class="bar" style="height:78%"></div>
-                                    <div class="bar alt" style="height:66%"></div>
-                                </div>
 
                                 <div class="bar-group">
-                                    <div class="bar" style="height:84%"></div>
-                                    <div class="bar alt" style="height:71%"></div>
+
+                                    <div
+                                        class="bar"
+                                        style="height:67%"
+                                    ></div>
+
+                                    <div
+                                        class="bar alt"
+                                        style="height:57%"
+                                    ></div>
+
                                 </div>
+
+
+                                <div class="bar-group">
+
+                                    <div
+                                        class="bar"
+                                        style="height:74%"
+                                    ></div>
+
+                                    <div
+                                        class="bar alt"
+                                        style="height:61%"
+                                    ></div>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div
+                                        class="bar"
+                                        style="height:78%"
+                                    ></div>
+
+                                    <div
+                                        class="bar alt"
+                                        style="height:66%"
+                                    ></div>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div
+                                        class="bar"
+                                        style="height:84%"
+                                    ></div>
+
+                                    <div
+                                        class="bar alt"
+                                        style="height:71%"
+                                    ></div>
+
+                                </div>
+
 
                             </div>
 
@@ -294,6 +583,7 @@
                                 <span>Jun</span>
 
                             </div>
+
 
                         </div>
 
@@ -312,223 +602,413 @@
 
                         </div>
 
+
                     </div>
+
 
 
                     <div class="card">
 
+
                         <div class="card-title">
-                            <h3>Workforce</h3>
-                            <span>Current</span>
+
+                            <h3>
+                                Workforce
+                            </h3>
+
+                            <span>
+                                Current
+                            </span>
+
                         </div>
 
 
                         <div class="donut-wrap">
 
+
                             <div class="donut"></div>
 
+
                             <div class="legend-list">
+
 
                                 <div>
                                     <i></i>
                                     Engineering <b>42%</b>
                                 </div>
 
+
                                 <div>
                                     <i class="t"></i>
                                     Sales <b>26%</b>
                                 </div>
+
 
                                 <div>
                                     <i class="l"></i>
                                     Operations <b>16%</b>
                                 </div>
 
+
                                 <div>
                                     <i class="g"></i>
                                     Others <b>16%</b>
                                 </div>
 
+
                             </div>
+
 
                         </div>
 
+
                     </div>
+
 
                 </div>
 
 
-                <div class="grid3" style="margin-top:18px">
+
+                <!-- STATUS / AI / ACTIVITY -->
+
+                <div
+                    class="grid3"
+                    style="margin-top:18px"
+                >
+
 
                     <div class="card">
 
+
                         <div class="card-title">
-                            <h3>Payroll Status</h3>
-                            <span>June</span>
+
+                            <h3>
+                                Payroll Status
+                            </h3>
+
+                            <span>
+                                June
+                            </span>
+
                         </div>
 
+
                         <div class="metric-row">
-                            <span>Processed</span>
-                            <b>94%</b>
+
+                            <span>
+                                Processed
+                            </span>
+
+                            <b>
+                                94%
+                            </b>
+
                         </div>
+
 
                         <div class="kpi-line">
                             <span style="width:94%"></span>
                         </div>
 
+
                         <div class="metric-row">
-                            <span>Pending</span>
-                            <b>4%</b>
+
+                            <span>
+                                Pending
+                            </span>
+
+                            <b>
+                                4%
+                            </b>
+
                         </div>
+
 
                         <div class="kpi-line">
                             <span style="width:4%"></span>
                         </div>
 
+
                     </div>
+
 
 
                     <div class="card ai">
 
+
                         <div class="card-title">
 
-                            <h3>AI Insights</h3>
+                            <h3>
+                                AI Insights
+                            </h3>
 
-                            <span>Live</span>
+                            <span>
+                                Live
+                            </span>
 
                         </div>
 
+
                         <div class="insight">
 
-                            <div class="tag">Forecast</div>
+                            <div class="tag">
+                                Forecast
+                            </div>
 
-                            <b>Payroll may increase 4.8%</b>
+                            <b>
+                                Payroll may increase 4.8%
+                            </b>
 
                             next month based on current hiring.
 
                         </div>
 
+
                         <div class="insight">
 
-                            <div class="tag">Risk</div>
+                            <div class="tag">
+                                Risk
+                            </div>
 
-                            <b>3 employees</b>
+                            <b>
+                                3 employees
+                            </b>
 
                             have unusual overtime patterns.
 
                         </div>
 
+
                     </div>
+
 
 
                     <div class="card">
 
+
                         <div class="card-title">
-                            <h3>Recent Activity</h3>
-                            <span>Today</span>
+
+                            <h3>
+                                Recent Activity
+                            </h3>
+
+                            <span>
+                                Today
+                            </span>
+
                         </div>
+
 
                         <div class="activity">
 
+
                             <div class="activity-row">
 
+
                                 <div class="person">
-                                    <div class="tiny">RK</div>
+
+                                    <div class="tiny">
+                                        RK
+                                    </div>
 
                                     <div>
-                                        <b style="font-size:10px;">Rahul Kumar</b>
-                                        <small>Payroll processed</small>
+
+                                        <b style="font-size:10px;">
+                                            Rahul Kumar
+                                        </b>
+
+                                        <small>
+                                            Payroll processed
+                                        </small>
+
                                     </div>
+
                                 </div>
 
-                                <small>2h</small>
+
+                                <small>
+                                    2h
+                                </small>
+
 
                             </div>
 
 
+
                             <div class="activity-row">
 
+
                                 <div class="person">
-                                    <div class="tiny">PS</div>
+
+                                    <div class="tiny">
+                                        PS
+                                    </div>
 
                                     <div>
-                                        <b style="font-size:10px;">Priya Singh</b>
-                                        <small>Profile updated</small>
+
+                                        <b style="font-size:10px;">
+                                            Priya Singh
+                                        </b>
+
+                                        <small>
+                                            Profile updated
+                                        </small>
+
                                     </div>
+
                                 </div>
 
-                                <small>4h</small>
+
+                                <small>
+                                    4h
+                                </small>
+
 
                             </div>
+
 
                         </div>
 
+
                     </div>
 
+
                 </div>
+
 
             </div>
 
 
-            <!-- ================= EMPLOYEES ================= -->
 
-            <div class="page" id="page-employees">
+            <!-- =================================================
+                 PEOPLE
+                 ================================================= -->
+
+            <div
+                class="page"
+                id="page-employees"
+            >
+
 
                 <div class="heading">
 
                     <div>
-                        <h1>People</h1>
+
+                        <h1>
+                            People
+                        </h1>
 
                         <p>
                             Manage your workforce
                         </p>
+
                     </div>
 
                 </div>
+
 
 
                 <div class="cards">
 
-                    <div class="card stat">
-                        <div>
-                            <div class="label">Total Employees</div>
-                            <h2>248</h2>
-                        </div>
-                        <div class="mini-icon">♙</div>
-                    </div>
 
                     <div class="card stat">
+
                         <div>
-                            <div class="label">Active</div>
-                            <h2>241</h2>
+
+                            <div class="label">
+                                Total Employees
+                            </div>
+
+                            <h2>
+                                248
+                            </h2>
+
                         </div>
-                        <div class="mini-icon">✓</div>
+
+                        <div class="mini-icon">
+                            ♙
+                        </div>
+
                     </div>
 
-                    <div class="card stat">
-                        <div>
-                            <div class="label">On Leave</div>
-                            <h2>7</h2>
-                        </div>
-                        <div class="mini-icon">◷</div>
-                    </div>
 
                     <div class="card stat">
+
                         <div>
-                            <div class="label">New This Month</div>
-                            <h2>12</h2>
+
+                            <div class="label">
+                                Active
+                            </div>
+
+                            <h2>
+                                241
+                            </h2>
+
                         </div>
-                        <div class="mini-icon">+</div>
+
+                        <div class="mini-icon">
+                            ✓
+                        </div>
+
                     </div>
+
+
+                    <div class="card stat">
+
+                        <div>
+
+                            <div class="label">
+                                On Leave
+                            </div>
+
+                            <h2>
+                                7
+                            </h2>
+
+                        </div>
+
+                        <div class="mini-icon">
+                            ◷
+                        </div>
+
+                    </div>
+
+
+                    <div class="card stat">
+
+                        <div>
+
+                            <div class="label">
+                                New This Month
+                            </div>
+
+                            <h2>
+                                12
+                            </h2>
+
+                        </div>
+
+                        <div class="mini-icon">
+                            +
+                        </div>
+
+                    </div>
+
 
                 </div>
 
 
+
                 <div class="card table-card">
+
 
                     <div class="card-title">
 
-                        <h3>Employee Directory</h3>
+
+                        <h3>
+                            Employee Directory
+                        </h3>
+
 
                         <div class="toolbar">
 
@@ -541,569 +1021,1154 @@
 
                         </div>
 
+
                     </div>
 
 
                     <div style="overflow-x:auto">
 
+
                         <table class="table">
+
 
                             <thead>
 
                                 <tr>
-                                    <th>Employee</th>
-                                    <th>Department</th>
-                                    <th>Role</th>
-                                    <th>Salary</th>
-                                    <th>Status</th>
+
+                                    <th>
+                                        Employee
+                                    </th>
+
+                                    <th>
+                                        Department
+                                    </th>
+
+                                    <th>
+                                        Role
+                                    </th>
+
+                                    <th>
+                                        Salary
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
                                 </tr>
 
                             </thead>
 
+
                             <tbody id="empBody">
 
+
                                 <tr>
+
                                     <td>
+
                                         <div class="emp">
-                                            <div class="avatar">RK</div>
+
+                                            <div class="avatar">
+                                                RK
+                                            </div>
+
                                             Rahul Kumar
+
                                         </div>
+
                                     </td>
-                                    <td>Engineering</td>
-                                    <td>Backend Developer</td>
-                                    <td>₹85,000</td>
-                                    <td><span class="status paid">Active</span></td>
+
+                                    <td>
+                                        Engineering
+                                    </td>
+
+                                    <td>
+                                        Backend Developer
+                                    </td>
+
+                                    <td>
+                                        ₹85,000
+                                    </td>
+
+                                    <td>
+                                        <span class="status paid">
+                                            Active
+                                        </span>
+                                    </td>
+
                                 </tr>
 
+
                                 <tr>
+
                                     <td>
+
                                         <div class="emp">
-                                            <div class="avatar">PS</div>
+
+                                            <div class="avatar">
+                                                PS
+                                            </div>
+
                                             Priya Singh
+
                                         </div>
+
                                     </td>
-                                    <td>Sales</td>
-                                    <td>Sales Manager</td>
-                                    <td>₹72,000</td>
-                                    <td><span class="status paid">Active</span></td>
+
+                                    <td>
+                                        Sales
+                                    </td>
+
+                                    <td>
+                                        Sales Manager
+                                    </td>
+
+                                    <td>
+                                        ₹72,000
+                                    </td>
+
+                                    <td>
+                                        <span class="status paid">
+                                            Active
+                                        </span>
+                                    </td>
+
                                 </tr>
 
+
                                 <tr>
+
                                     <td>
+
                                         <div class="emp">
-                                            <div class="avatar">AM</div>
+
+                                            <div class="avatar">
+                                                AM
+                                            </div>
+
                                             Amit Mishra
+
                                         </div>
+
                                     </td>
-                                    <td>Operations</td>
-                                    <td>Operations Lead</td>
-                                    <td>₹67,000</td>
-                                    <td><span class="status pending">On Leave</span></td>
+
+                                    <td>
+                                        Operations
+                                    </td>
+
+                                    <td>
+                                        Operations Lead
+                                    </td>
+
+                                    <td>
+                                        ₹67,000
+                                    </td>
+
+                                    <td>
+                                        <span class="status pending">
+                                            On Leave
+                                        </span>
+                                    </td>
+
                                 </tr>
 
+
                                 <tr>
+
                                     <td>
+
                                         <div class="emp">
-                                            <div class="avatar">NS</div>
+
+                                            <div class="avatar">
+                                                NS
+                                            </div>
+
                                             Neha Sharma
+
                                         </div>
+
                                     </td>
-                                    <td>Engineering</td>
-                                    <td>Frontend Developer</td>
-                                    <td>₹78,000</td>
-                                    <td><span class="status paid">Active</span></td>
+
+                                    <td>
+                                        Engineering
+                                    </td>
+
+                                    <td>
+                                        Frontend Developer
+                                    </td>
+
+                                    <td>
+                                        ₹78,000
+                                    </td>
+
+                                    <td>
+                                        <span class="status paid">
+                                            Active
+                                        </span>
+                                    </td>
+
                                 </tr>
+
 
                             </tbody>
 
+
                         </table>
+
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
 
-            <!-- ================= PAYROLL ================= -->
 
-            <div class="page" id="page-payroll">
+            <!-- =================================================
+                 PAYROLL
+                 ================================================= -->
+
+            <div
+                class="page"
+                id="page-payroll"
+            >
+
 
                 <div class="heading">
 
+
                     <div>
-                        <h1>Payroll</h1>
+
+                        <h1>
+                            Payroll
+                        </h1>
 
                         <p>
                             Payroll processing and payment status
                         </p>
+
                     </div>
+
 
                     <button
                         class="primary"
                         onclick="toast('Payroll processing started')"
                     >
+
                         + Run Payroll
+
                     </button>
 
+
                 </div>
+
 
 
                 <div class="cards">
 
-                    <div class="card stat">
-                        <div>
-                            <div class="label">Gross Payroll</div>
-                            <h2>₹42.8L</h2>
-                            <div class="trend">+2.8%</div>
-                        </div>
-                        <div class="mini-icon">₹</div>
-                    </div>
 
                     <div class="card stat">
+
                         <div>
-                            <div class="label">Net Payroll</div>
-                            <h2>₹37.4L</h2>
-                            <div class="trend">+2.1%</div>
+
+                            <div class="label">
+                                Gross Payroll
+                            </div>
+
+                            <h2>
+                                ₹42.8L
+                            </h2>
+
+                            <div class="trend">
+                                +2.8%
+                            </div>
+
                         </div>
-                        <div class="mini-icon">₹</div>
+
+                        <div class="mini-icon">
+                            ₹
+                        </div>
+
                     </div>
 
-                    <div class="card stat">
-                        <div>
-                            <div class="label">Taxes</div>
-                            <h2>₹5.4L</h2>
-                        </div>
-                        <div class="mini-icon">%</div>
-                    </div>
 
                     <div class="card stat">
+
                         <div>
-                            <div class="label">Processed</div>
-                            <h2>98.7%</h2>
+
+                            <div class="label">
+                                Net Payroll
+                            </div>
+
+                            <h2>
+                                ₹37.4L
+                            </h2>
+
+                            <div class="trend">
+                                +2.1%
+                            </div>
+
                         </div>
-                        <div class="mini-icon">✓</div>
+
+                        <div class="mini-icon">
+                            ₹
+                        </div>
+
                     </div>
+
+
+                    <div class="card stat">
+
+                        <div>
+
+                            <div class="label">
+                                Taxes
+                            </div>
+
+                            <h2>
+                                ₹5.4L
+                            </h2>
+
+                        </div>
+
+                        <div class="mini-icon">
+                            %
+                        </div>
+
+                    </div>
+
+
+                    <div class="card stat">
+
+                        <div>
+
+                            <div class="label">
+                                Processed
+                            </div>
+
+                            <h2>
+                                98.7%
+                            </h2>
+
+                        </div>
+
+                        <div class="mini-icon">
+                            ✓
+                        </div>
+
+                    </div>
+
 
                 </div>
 
 
+
                 <div class="card table-card">
 
+
                     <div class="card-title">
-                        <h3>Payroll Records</h3>
-                        <span>June 2026</span>
+
+                        <h3>
+                            Payroll Records
+                        </h3>
+
+                        <span>
+                            June 2026
+                        </span>
+
                     </div>
 
 
                     <div style="overflow-x:auto">
 
+
                         <table class="table">
+
 
                             <thead>
 
                                 <tr>
-                                    <th>Employee</th>
-                                    <th>Gross Salary</th>
-                                    <th>Tax</th>
-                                    <th>Net Salary</th>
-                                    <th>Status</th>
+
+                                    <th>
+                                        Employee
+                                    </th>
+
+                                    <th>
+                                        Gross Salary
+                                    </th>
+
+                                    <th>
+                                        Tax
+                                    </th>
+
+                                    <th>
+                                        Net Salary
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
                                 </tr>
 
                             </thead>
 
+
                             <tbody>
 
-                                <tr>
-                                    <td>Rahul Kumar</td>
-                                    <td>₹85,000</td>
-                                    <td>₹10,200</td>
-                                    <td>₹74,800</td>
-                                    <td><span class="status paid">Paid</span></td>
-                                </tr>
 
                                 <tr>
-                                    <td>Priya Singh</td>
-                                    <td>₹72,000</td>
-                                    <td>₹8,640</td>
-                                    <td>₹63,360</td>
-                                    <td><span class="status paid">Paid</span></td>
+
+                                    <td>
+                                        Rahul Kumar
+                                    </td>
+
+                                    <td>
+                                        ₹85,000
+                                    </td>
+
+                                    <td>
+                                        ₹10,200
+                                    </td>
+
+                                    <td>
+                                        ₹74,800
+                                    </td>
+
+                                    <td>
+                                        <span class="status paid">
+                                            Paid
+                                        </span>
+                                    </td>
+
                                 </tr>
 
+
                                 <tr>
-                                    <td>Amit Mishra</td>
-                                    <td>₹67,000</td>
-                                    <td>₹8,040</td>
-                                    <td>₹58,960</td>
-                                    <td><span class="status pending">Pending</span></td>
+
+                                    <td>
+                                        Priya Singh
+                                    </td>
+
+                                    <td>
+                                        ₹72,000
+                                    </td>
+
+                                    <td>
+                                        ₹8,640
+                                    </td>
+
+                                    <td>
+                                        ₹63,360
+                                    </td>
+
+                                    <td>
+                                        <span class="status paid">
+                                            Paid
+                                        </span>
+                                    </td>
+
                                 </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Amit Mishra
+                                    </td>
+
+                                    <td>
+                                        ₹67,000
+                                    </td>
+
+                                    <td>
+                                        ₹8,040
+                                    </td>
+
+                                    <td>
+                                        ₹58,960
+                                    </td>
+
+                                    <td>
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                </tr>
+
 
                             </tbody>
 
+
                         </table>
+
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
 
-            <!-- ================= REPORTS ================= -->
 
-            <div class="page" id="page-reports">
+            <!-- =================================================
+                 REPORTS & ANALYSIS
+                 ================================================= -->
+
+            <div
+                class="page"
+                id="page-reports"
+            >
+
+
+                <!-- REPORTS HEADER -->
 
                 <div class="heading">
 
+
                     <div>
-                        <h1>Reports</h1>
+
+                        <h1>
+                            Reports & Analysis
+                        </h1>
 
                         <p>
-                            Payroll and workforce analytics
+                            Payroll reports, workforce analytics and AI-powered insights
                         </p>
+
                     </div>
+
 
                 </div>
 
+
+
+                <!-- REPORT CARDS -->
 
                 <div class="report-grid">
 
-                    <div class="card report-card">
-                        <div class="r-icon">▤</div>
-                        <h3>Payroll Summary</h3>
-                        <p>Monthly payroll breakdown and analysis.</p>
-                    </div>
 
                     <div class="card report-card">
-                        <div class="r-icon">♙</div>
-                        <h3>Employee Report</h3>
-                        <p>Workforce and employee information.</p>
+
+                        <div class="r-icon">
+                            ▤
+                        </div>
+
+                        <h3>
+                            Payroll Summary
+                        </h3>
+
+                        <p>
+                            Monthly payroll breakdown and analysis.
+                        </p>
+
                     </div>
 
-                    <div class="card report-card">
-                        <div class="r-icon">₹</div>
-                        <h3>Tax Report</h3>
-                        <p>Tax deductions and liabilities.</p>
-                    </div>
 
                     <div class="card report-card">
-                        <div class="r-icon">◈</div>
-                        <h3>Attendance Report</h3>
-                        <p>Attendance and working hours analysis.</p>
+
+                        <div class="r-icon">
+                            ♙
+                        </div>
+
+                        <h3>
+                            Employee Report
+                        </h3>
+
+                        <p>
+                            Workforce and employee information.
+                        </p>
+
                     </div>
 
-                    <div class="card report-card">
-                        <div class="r-icon">✦</div>
-                        <h3>AI Forecast Report</h3>
-                        <p>AI generated payroll forecasts.</p>
-                    </div>
 
                     <div class="card report-card">
-                        <div class="r-icon">↗</div>
-                        <h3>Performance Report</h3>
-                        <p>Workforce performance insights.</p>
+
+                        <div class="r-icon">
+                            ₹
+                        </div>
+
+                        <h3>
+                            Tax Report
+                        </h3>
+
+                        <p>
+                            Tax deductions and liabilities.
+                        </p>
+
                     </div>
+
+
+                    <div class="card report-card">
+
+                        <div class="r-icon">
+                            ◈
+                        </div>
+
+                        <h3>
+                            Attendance Report
+                        </h3>
+
+                        <p>
+                            Attendance and working hours analysis.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card report-card">
+
+                        <div class="r-icon">
+                            ✦
+                        </div>
+
+                        <h3>
+                            AI Forecast Report
+                        </h3>
+
+                        <p>
+                            AI generated payroll forecasts.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card report-card">
+
+                        <div class="r-icon">
+                            ↗
+                        </div>
+
+                        <h3>
+                            Performance Report
+                        </h3>
+
+                        <p>
+                            Workforce performance insights.
+                        </p>
+
+                    </div>
+
 
                 </div>
 
 
+
+                <!-- MONTHLY PAYROLL TREND -->
+
                 <div class="card table-card">
 
+
                     <div class="card-title">
-                        <h3>Monthly Payroll Trend</h3>
-                        <span>2026</span>
+
+                        <h3>
+                            Monthly Payroll Trend
+                        </h3>
+
+                        <span>
+                            2026
+                        </span>
+
                     </div>
+
 
                     <div class="chart">
 
+
                         <div class="bars">
 
-                            <div class="bar-group">
-                                <div class="bar" style="height:55%"></div>
-                            </div>
 
                             <div class="bar-group">
-                                <div class="bar" style="height:61%"></div>
+                                <div
+                                    class="bar"
+                                    style="height:55%"
+                                ></div>
                             </div>
 
-                            <div class="bar-group">
-                                <div class="bar" style="height:68%"></div>
-                            </div>
 
                             <div class="bar-group">
-                                <div class="bar" style="height:73%"></div>
+                                <div
+                                    class="bar"
+                                    style="height:61%"
+                                ></div>
                             </div>
 
-                            <div class="bar-group">
-                                <div class="bar" style="height:78%"></div>
-                            </div>
 
                             <div class="bar-group">
-                                <div class="bar" style="height:84%"></div>
+                                <div
+                                    class="bar"
+                                    style="height:68%"
+                                ></div>
                             </div>
+
+
+                            <div class="bar-group">
+                                <div
+                                    class="bar"
+                                    style="height:73%"
+                                ></div>
+                            </div>
+
+
+                            <div class="bar-group">
+                                <div
+                                    class="bar"
+                                    style="height:78%"
+                                ></div>
+                            </div>
+
+
+                            <div class="bar-group">
+                                <div
+                                    class="bar"
+                                    style="height:84%"
+                                ></div>
+                            </div>
+
 
                         </div>
 
+
                         <div class="months">
+
                             <span>Jan</span>
                             <span>Feb</span>
                             <span>Mar</span>
                             <span>Apr</span>
                             <span>May</span>
                             <span>Jun</span>
+
                         </div>
 
+
                     </div>
 
-                </div>
-
-            </div>
-
-
-            <!-- ================= AI FORECASTING ================= -->
-
-            <div class="page" id="page-ai">
-
-                <div class="heading">
-
-                    <div>
-                        <h1>AI Forecasting & Analysis</h1>
-
-                        <p>
-                            Predictive insights for your workforce
-                        </p>
-                    </div>
 
                 </div>
 
 
-                <div class="cards">
 
-                    <div class="card">
+                <!-- =================================================
+                     AI ANALYSIS
+                     ================================================= -->
 
-                        <div class="label">
-                            Next Month Payroll
+                <div class="analysis-section">
+
+
+                    <div class="heading">
+
+
+                        <div>
+
+                            <h1>
+                                AI Forecasting & Analysis
+                            </h1>
+
+                            <p>
+                                Predictive insights for your workforce
+                            </p>
+
                         </div>
 
-                        <div class="forecast">
-                            ₹44.9L
-                        </div>
-
-                        <div class="trend">
-                            +4.8% predicted
-                        </div>
 
                     </div>
 
 
-                    <div class="card">
 
-                        <div class="label">
-                            Hiring Impact
-                        </div>
+                    <!-- AI KPI CARDS -->
 
-                        <div class="forecast">
-                            +₹2.1L
-                        </div>
-
-                        <div class="muted">
-                            Based on planned hiring
-                        </div>
-
-                    </div>
+                    <div class="cards">
 
 
-                    <div class="card">
+                        <div class="card">
 
-                        <div class="label">
-                            Overtime Risk
-                        </div>
-
-                        <div class="forecast">
-                            3
-                        </div>
-
-                        <div class="muted">
-                            Employees flagged
-                        </div>
-
-                    </div>
-
-
-                    <div class="card">
-
-                        <div class="label">
-                            Payroll Accuracy
-                        </div>
-
-                        <div class="forecast">
-                            98.9%
-                        </div>
-
-                        <div class="trend">
-                            +0.2% predicted
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="grid2">
-
-                    <div class="card">
-
-                        <div class="card-title">
-                            <h3>Payroll Forecast</h3>
-                            <span>Next 6 Months</span>
-                        </div>
-
-                        <div class="chart">
-
-                            <div class="bars">
-
-                                <div class="bar-group">
-                                    <div class="bar" style="height:54%"></div>
-                                </div>
-
-                                <div class="bar-group">
-                                    <div class="bar" style="height:62%"></div>
-                                </div>
-
-                                <div class="bar-group">
-                                    <div class="bar" style="height:68%"></div>
-                                </div>
-
-                                <div class="bar-group">
-                                    <div class="bar" style="height:74%"></div>
-                                </div>
-
-                                <div class="bar-group">
-                                    <div class="bar" style="height:82%"></div>
-                                </div>
-
-                                <div class="bar-group">
-                                    <div class="bar" style="height:88%"></div>
-                                </div>
-
+                            <div class="label">
+                                Next Month Payroll
                             </div>
 
-                            <div class="months">
-                                <span>Jul</span>
-                                <span>Aug</span>
-                                <span>Sep</span>
-                                <span>Oct</span>
-                                <span>Nov</span>
-                                <span>Dec</span>
+                            <div class="forecast">
+                                ₹44.9L
+                            </div>
+
+                            <div class="trend">
+                                +4.8% predicted
                             </div>
 
                         </div>
 
+
+                        <div class="card">
+
+                            <div class="label">
+                                Hiring Impact
+                            </div>
+
+                            <div class="forecast">
+                                +₹2.1L
+                            </div>
+
+                            <div class="muted">
+                                Based on planned hiring
+                            </div>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="label">
+                                Overtime Risk
+                            </div>
+
+                            <div class="forecast">
+                                3
+                            </div>
+
+                            <div class="muted">
+                                Employees flagged
+                            </div>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="label">
+                                Payroll Accuracy
+                            </div>
+
+                            <div class="forecast">
+                                98.9%
+                            </div>
+
+                            <div class="trend">
+                                +0.2% predicted
+                            </div>
+
+                        </div>
+
+
                     </div>
 
 
-                    <div class="card ai">
+
+                    <!-- FORECAST + RECOMMENDATIONS -->
+
+                    <div class="grid2">
+
+
+                        <div class="card">
+
+
+                            <div class="card-title">
+
+                                <h3>
+                                    Payroll Forecast
+                                </h3>
+
+                                <span>
+                                    Next 6 Months
+                                </span>
+
+                            </div>
+
+
+                            <div class="chart">
+
+
+                                <div class="bars">
+
+
+                                    <div class="bar-group">
+
+                                        <div
+                                            class="bar"
+                                            style="height:54%"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <div class="bar-group">
+
+                                        <div
+                                            class="bar"
+                                            style="height:62%"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <div class="bar-group">
+
+                                        <div
+                                            class="bar"
+                                            style="height:68%"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <div class="bar-group">
+
+                                        <div
+                                            class="bar"
+                                            style="height:74%"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <div class="bar-group">
+
+                                        <div
+                                            class="bar"
+                                            style="height:82%"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <div class="bar-group">
+
+                                        <div
+                                            class="bar"
+                                            style="height:88%"
+                                        ></div>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="months">
+
+                                    <span>Jul</span>
+                                    <span>Aug</span>
+                                    <span>Sep</span>
+                                    <span>Oct</span>
+                                    <span>Nov</span>
+                                    <span>Dec</span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- RECOMMENDATIONS -->
+
+                        <div class="card ai">
+
+
+                            <div class="card-title">
+
+                                <h3>
+                                    Recommendations
+                                </h3>
+
+                                <span>
+                                    AI
+                                </span>
+
+                            </div>
+
+
+                            <div class="insight">
+
+                                <div class="tag">
+                                    Cost Optimization
+                                </div>
+
+                                Review overtime allocation in Engineering.
+
+                            </div>
+
+
+                            <div class="insight">
+
+                                <div class="tag">
+                                    Hiring
+                                </div>
+
+                                Current hiring pace may increase payroll by 4.8%.
+
+                            </div>
+
+
+                            <div class="insight">
+
+                                <div class="tag">
+                                    Risk
+                                </div>
+
+                                Investigate unusual overtime activity.
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- FORECAST DRIVERS -->
+
+                    <div class="card table-card">
+
 
                         <div class="card-title">
-                            <h3>Recommendations</h3>
-                            <span>AI</span>
+
+                            <h3>
+                                Forecast Drivers
+                            </h3>
+
                         </div>
 
-                        <div class="insight">
-                            <div class="tag">Cost Optimization</div>
-                            Review overtime allocation in Engineering.
+
+                        <div class="metric-row">
+
+                            <span>
+                                Employee Growth
+                            </span>
+
+                            <b>
+                                78%
+                            </b>
+
                         </div>
 
-                        <div class="insight">
-                            <div class="tag">Hiring</div>
-                            Current hiring pace may increase payroll by 4.8%.
+
+                        <div class="kpi-line">
+
+                            <span style="width:78%"></span>
+
                         </div>
 
-                        <div class="insight">
-                            <div class="tag">Risk</div>
-                            Investigate unusual overtime activity.
+
+                        <div class="metric-row">
+
+                            <span>
+                                Salary Growth
+                            </span>
+
+                            <b>
+                                52%
+                            </b>
+
                         </div>
+
+
+                        <div class="kpi-line">
+
+                            <span style="width:52%"></span>
+
+                        </div>
+
+
+                        <div class="metric-row">
+
+                            <span>
+                                Overtime
+                            </span>
+
+                            <b>
+                                34%
+                            </b>
+
+                        </div>
+
+
+                        <div class="kpi-line">
+
+                            <span style="width:34%"></span>
+
+                        </div>
+
 
                     </div>
+
 
                 </div>
 
-
-                <div class="card table-card">
-
-                    <div class="card-title">
-                        <h3>Forecast Drivers</h3>
-                    </div>
-
-                    <div class="metric-row">
-                        <span>Employee Growth</span>
-                        <b>78%</b>
-                    </div>
-
-                    <div class="kpi-line">
-                        <span style="width:78%"></span>
-                    </div>
-
-                    <div class="metric-row">
-                        <span>Salary Growth</span>
-                        <b>52%</b>
-                    </div>
-
-                    <div class="kpi-line">
-                        <span style="width:52%"></span>
-                    </div>
-
-                    <div class="metric-row">
-                        <span>Overtime</span>
-                        <b>34%</b>
-                    </div>
-
-                    <div class="kpi-line">
-                        <span style="width:34%"></span>
-                    </div>
-
-                </div>
 
             </div>
 
 
-            <!-- ================= AI AGENT ================= -->
 
-            <div class="page" id="page-ai-agent">
+            <!-- =================================================
+                 AI AGENT
+                 ================================================= -->
+
+            <div
+                class="page"
+                id="page-ai-agent"
+            >
+
 
                 <div class="heading">
 
+
                     <div>
-                        <h1>AI Agent</h1>
+
+                        <h1>
+                            AI Agent
+                        </h1>
 
                         <p>
                             Tell PayrollPixel what you want to do
                         </p>
+
                     </div>
 
+
                     <div class="ai-agent-status">
+
                         <span class="agent-status-dot"></span>
+
                         Agent Ready
+
                     </div>
+
 
                 </div>
 
 
+
                 <div class="ai-agent-layout">
+
 
                     <!-- CHAT -->
 
                     <div class="card ai-agent-chat">
 
+
                         <div class="ai-agent-header">
+
 
                             <div class="ai-agent-avatar">
                                 ✦
                             </div>
 
+
                             <div>
 
-                                <h3>PayrollPixel AI</h3>
+                                <h3>
+                                    PayrollPixel AI
+                                </h3>
 
                                 <p>
                                     I can help you navigate and manage your dashboard.
@@ -1111,7 +2176,9 @@
 
                             </div>
 
+
                         </div>
+
 
 
                         <div
@@ -1119,32 +2186,50 @@
                             id="aiAgentMessages"
                         >
 
+
                             <div class="agent-message agent">
+
 
                                 <div class="message-avatar">
                                     ✦
                                 </div>
 
+
                                 <div class="message-content">
 
-                                    <b>PayrollPixel AI</b>
+
+                                    <b>
+                                        PayrollPixel AI
+                                    </b>
+
 
                                     <p>
+
                                         Hi! Tell me what you want to do.
                                         For example, you can say
-                                        <strong>"Show employees"</strong>
+                                        <strong>
+                                            "Show employees"
+                                        </strong>
                                         or
-                                        <strong>"Open payroll"</strong>.
+                                        <strong>
+                                            "Open payroll"
+                                        </strong>.
+
                                     </p>
+
 
                                 </div>
 
+
                             </div>
+
 
                         </div>
 
 
+
                         <div class="ai-agent-input-area">
+
 
                             <input
                                 type="text"
@@ -1153,6 +2238,7 @@
                                 autocomplete="off"
                             >
 
+
                             <button
                                 class="ai-send-btn"
                                 id="aiAgentSend"
@@ -1160,249 +2246,464 @@
                                 Send
                             </button>
 
+
                         </div>
 
+
                     </div>
+
 
 
                     <!-- COMMANDS -->
 
                     <div class="card ai-agent-commands">
 
+
                         <div class="card-title">
 
-                            <h3>Suggested Commands</h3>
+                            <h3>
+                                Suggested Commands
+                            </h3>
 
-                            <span>Try these</span>
+                            <span>
+                                Try these
+                            </span>
 
                         </div>
+
 
 
                         <button
                             class="agent-command"
                             data-command="Show employees"
                         >
-                            <span>♙</span>
+
+                            <span>
+                                ♙
+                            </span>
+
 
                             <div>
-                                <b>Show employees</b>
-                                <small>Open employee directory</small>
+
+                                <b>
+                                    Show employees
+                                </b>
+
+                                <small>
+                                    Open employee directory
+                                </small>
+
                             </div>
 
+
                         </button>
+
 
 
                         <button
                             class="agent-command"
                             data-command="Open payroll"
                         >
-                            <span>₹</span>
+
+                            <span>
+                                ₹
+                            </span>
+
 
                             <div>
-                                <b>Open payroll</b>
-                                <small>View payroll records</small>
+
+                                <b>
+                                    Open payroll
+                                </b>
+
+                                <small>
+                                    View payroll records
+                                </small>
+
                             </div>
 
+
                         </button>
+
 
 
                         <button
                             class="agent-command"
                             data-command="Open reports"
                         >
-                            <span>▤</span>
+
+                            <span>
+                                ▤
+                            </span>
+
 
                             <div>
-                                <b>Open reports</b>
-                                <small>View payroll reports</small>
+
+                                <b>
+                                    Open Reports & Analysis
+                                </b>
+
+                                <small>
+                                    View reports and AI analysis
+                                </small>
+
                             </div>
 
+
                         </button>
+
 
 
                         <button
                             class="agent-command"
                             data-command="Show AI forecasting"
                         >
-                            <span>✦</span>
+
+                            <span>
+                                ✦
+                            </span>
+
 
                             <div>
-                                <b>Show AI forecasting</b>
-                                <small>Open AI predictions</small>
+
+                                <b>
+                                    Show AI forecasting
+                                </b>
+
+                                <small>
+                                    Open AI predictions
+                                </small>
+
                             </div>
 
+
                         </button>
+
 
 
                         <button
                             class="agent-command"
                             data-command="Open settings"
                         >
-                            <span>⚙</span>
+
+                            <span>
+                                ⚙
+                            </span>
+
 
                             <div>
-                                <b>Open settings</b>
-                                <small>Manage dashboard settings</small>
+
+                                <b>
+                                    Open settings
+                                </b>
+
+                                <small>
+                                    Manage dashboard settings
+                                </small>
+
                             </div>
 
+
                         </button>
+
 
 
                         <button
                             class="agent-command"
                             data-command="Go to dashboard"
                         >
-                            <span>▦</span>
+
+                            <span>
+                                ▦
+                            </span>
+
 
                             <div>
-                                <b>Go to dashboard</b>
-                                <small>Return to dashboard</small>
+
+                                <b>
+                                    Go to dashboard
+                                </b>
+
+                                <small>
+                                    Return to dashboard
+                                </small>
+
                             </div>
+
 
                         </button>
 
+
                     </div>
+
 
                 </div>
 
 
+
+                <!-- CAPABILITIES -->
+
                 <div class="card ai-agent-info">
+
 
                     <div class="card-title">
 
-                        <h3>What can I do?</h3>
+                        <h3>
+                            What can I do?
+                        </h3>
 
-                        <span>AI Agent</span>
+                        <span>
+                            AI Agent
+                        </span>
 
                     </div>
 
 
                     <div class="agent-capabilities">
 
+
                         <div>
-                            <span>✦</span>
+
+                            <span>
+                                ✦
+                            </span>
+
                             Navigate dashboard pages
+
                         </div>
 
+
                         <div>
-                            <span>⌕</span>
+
+                            <span>
+                                ⌕
+                            </span>
+
                             Search employees
+
                         </div>
 
+
                         <div>
-                            <span>▤</span>
+
+                            <span>
+                                ▤
+                            </span>
+
                             Open reports
+
                         </div>
 
+
                         <div>
-                            <span>₹</span>
+
+                            <span>
+                                ₹
+                            </span>
+
                             Access payroll
+
                         </div>
 
+
                         <div>
-                            <span>⚙</span>
+
+                            <span>
+                                ⚙
+                            </span>
+
                             Open settings
+
                         </div>
 
+
                         <div>
-                            <span>◈</span>
+
+                            <span>
+                                ◈
+                            </span>
+
                             Understand natural-language commands
+
                         </div>
+
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
 
-            <!-- ================= SETTINGS ================= -->
 
-            <div class="page" id="page-settings">
+            <!-- =================================================
+                 SETTINGS
+                 ================================================= -->
+
+            <div
+                class="page"
+                id="page-settings"
+            >
+
 
                 <div class="heading">
 
+
                     <div>
-                        <h1>Settings</h1>
+
+                        <h1>
+                            Settings
+                        </h1>
 
                         <p>
                             Manage company and notification settings
                         </p>
+
                     </div>
+
 
                 </div>
 
 
+
                 <div class="grid2">
+
 
                     <div class="card">
 
+
                         <div class="card-title">
-                            <h3>Company Profile</h3>
+
+                            <h3>
+                                Company Profile
+                            </h3>
+
                         </div>
 
-                        <div class="metric-row">
-                            <span>Company Name</span>
-                            <b>PayrollPixel Technologies</b>
-                        </div>
 
                         <div class="metric-row">
-                            <span>Employees</span>
-                            <b>248</b>
+
+                            <span>
+                                Company Name
+                            </span>
+
+                            <b>
+                                PayrollPixel Technologies
+                            </b>
+
                         </div>
 
+
                         <div class="metric-row">
-                            <span>Payroll Cycle</span>
-                            <b>Monthly</b>
+
+                            <span>
+                                Employees
+                            </span>
+
+                            <b>
+                                248
+                            </b>
+
                         </div>
+
+
+                        <div class="metric-row">
+
+                            <span>
+                                Payroll Cycle
+                            </span>
+
+                            <b>
+                                Monthly
+                            </b>
+
+                        </div>
+
 
                         <button
                             class="primary"
                             onclick="toast('Company profile saved')"
                         >
+
                             Save Changes
+
                         </button>
 
+
                     </div>
+
 
 
                     <div class="card">
 
+
                         <div class="card-title">
-                            <h3>Notifications</h3>
+
+                            <h3>
+                                Notifications
+                            </h3>
+
                         </div>
 
-                        <div class="insight" style="color:var(--text)">
+
+                        <div
+                            class="insight"
+                            style="color:var(--text)"
+                        >
                             Payroll processing notifications
                         </div>
 
-                        <div class="insight" style="color:var(--text)">
+
+                        <div
+                            class="insight"
+                            style="color:var(--text)"
+                        >
                             AI forecast alerts
                         </div>
 
-                        <div class="insight" style="color:var(--text)">
+
+                        <div
+                            class="insight"
+                            style="color:var(--text)"
+                        >
                             Employee activity alerts
                         </div>
 
+
                     </div>
+
 
                 </div>
 
+
             </div>
+
 
         </section>
 
+
     </main>
+
 
 </div>
 
 
-<!-- ================= TOAST ================= -->
 
-<div class="toast" id="toast"></div>
+<!-- =========================================================
+     TOAST
+     ========================================================= -->
+
+<div
+    class="toast"
+    id="toast"
+></div>
 
 
-<script src="script.js"></script>
+
+<script src="./script.js"></script>
 
 </body>
+
 </html>
