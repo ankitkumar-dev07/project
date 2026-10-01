@@ -12,10 +12,7 @@
 
     <title>PayrollPixel AI</title>
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
         rel="preconnect"
@@ -28,10 +25,7 @@
         rel="stylesheet"
     >
 
-    <link
-        rel="stylesheet"
-        href="./style.css"
-    >
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 
@@ -46,13 +40,8 @@
          SIDEBAR
          ===================================================== -->
 
-    <aside
-        class="sidebar"
-        id="sidebar"
-    >
+    <aside class="sidebar" id="sidebar">
 
-
-        <!-- LOGO -->
 
         <div class="logo">
 
@@ -74,78 +63,50 @@
         <nav class="nav">
 
 
-            <!-- DASHBOARD -->
-
             <button
                 class="active"
                 data-page="dashboard"
             >
 
-                <span class="icon">
-                    ▦
-                </span>
+                <span class="icon">▦</span>
 
                 Dashboard
 
             </button>
 
 
-            <!-- PEOPLE -->
+            <button data-page="employees">
 
-            <button
-                data-page="employees"
-            >
+                <span class="icon">♙</span>
 
-                <span class="icon">
-                    ♙
-                </span>
-
-                People
+                Employees
 
             </button>
 
 
-            <!-- PAYROLL -->
+            <button data-page="payroll">
 
-            <button
-                data-page="payroll"
-            >
-
-                <span class="icon">
-                    ₹
-                </span>
+                <span class="icon">₹</span>
 
                 Payroll
 
             </button>
 
 
-            <!-- REPORTS & ANALYSIS -->
+            <button data-page="reports">
 
-            <button
-                data-page="reports"
-            >
+                <span class="icon">▤</span>
 
-                <span class="icon">
-                    ▤
-                </span>
-
-                Reports & Analysis
+                Reports & Analytics
 
             </button>
 
 
-            <!-- AI AGENT -->
+            <button data-page="ai-agent">
 
-            <button
-                data-page="ai-agent"
-            >
+                <span class="icon">✧</span>
 
-                <span class="icon">
-                    ✧
-                </span>
-
-                AI Agent
+                Insights Agent
 
             </button>
 
@@ -153,25 +114,39 @@
         </nav>
 
 
-        <!-- MANAGE -->
+        <!-- PROFILE -->
 
         <div class="nav-label">
-            Manage
+            Profile
         </div>
 
 
         <nav class="nav">
 
 
-            <button
-                data-page="settings"
-            >
+            <button data-page="company-profile">
 
-                <span class="icon">
-                    ⚙
-                </span>
+                <span class="icon">◉</span>
 
-                Settings
+                Company Profile
+
+            </button>
+
+
+            <button data-page="users-roles">
+
+                <span class="icon">♙</span>
+
+                Users & Roles
+
+            </button>
+
+
+            <button data-page="integrations">
+
+                <span class="icon">⌘</span>
+
+                Integrations
 
             </button>
 
@@ -217,16 +192,12 @@
     <main class="main">
 
 
-        <!-- =================================================
-             TOPBAR
-             ================================================= -->
+        <!-- TOPBAR -->
 
         <header class="topbar">
 
 
-            <div
-                style="display:flex;align-items:center;"
-            >
+            <div class="top-left">
 
 
                 <button
@@ -239,9 +210,7 @@
 
                 <div class="search">
 
-                    <span>
-                        ⌕
-                    </span>
+                    <span>⌕</span>
 
                     <input
                         type="text"
@@ -273,7 +242,7 @@
 
                     <div>
 
-                        <b style="font-size:11px;">
+                        <b>
                             Ankit Kumar
                         </b>
 
@@ -294,9 +263,9 @@
 
 
 
-        <!-- =================================================
+        <!-- =====================================================
              CONTENT
-             ================================================= -->
+             ===================================================== -->
 
         <section class="content">
 
@@ -329,7 +298,7 @@
 
                     <button
                         class="primary"
-                        onclick="toast('Payroll processing started')"
+                        onclick="runPayroll()"
                     >
 
                         + Run Payroll
@@ -341,7 +310,7 @@
 
 
 
-                <!-- STAT CARDS -->
+                <!-- STATS -->
 
                 <div class="cards">
 
@@ -371,7 +340,6 @@
                     </div>
 
 
-
                     <div class="card stat">
 
                         <div>
@@ -397,7 +365,6 @@
                     </div>
 
 
-
                     <div class="card stat">
 
                         <div>
@@ -421,7 +388,6 @@
                         </div>
 
                     </div>
-
 
 
                     <div class="card stat">
@@ -453,7 +419,7 @@
 
 
 
-                <!-- PAYROLL OVERVIEW + WORKFORCE -->
+                <!-- PAYROLL + WORKFORCE -->
 
                 <div class="grid2">
 
@@ -631,30 +597,25 @@
 
                             <div class="legend-list">
 
-
                                 <div>
                                     <i></i>
                                     Engineering <b>42%</b>
                                 </div>
-
 
                                 <div>
                                     <i class="t"></i>
                                     Sales <b>26%</b>
                                 </div>
 
-
                                 <div>
                                     <i class="l"></i>
                                     Operations <b>16%</b>
                                 </div>
 
-
                                 <div>
                                     <i class="g"></i>
                                     Others <b>16%</b>
                                 </div>
-
 
                             </div>
 
@@ -669,11 +630,10 @@
 
 
 
-                <!-- STATUS / AI / ACTIVITY -->
+                <!-- STATUS + ACTIVITY -->
 
                 <div
-                    class="grid3"
-                    style="margin-top:18px"
+                    class="grid2 dashboard-bottom"
                 >
 
 
@@ -707,7 +667,9 @@
 
 
                         <div class="kpi-line">
+
                             <span style="width:94%"></span>
+
                         </div>
 
 
@@ -725,12 +687,16 @@
 
 
                         <div class="kpi-line">
+
                             <span style="width:4%"></span>
+
                         </div>
 
 
                     </div>
-                    
+
+
+
                     <div class="card">
 
 
@@ -752,7 +718,6 @@
 
                             <div class="activity-row">
 
-
                                 <div class="person">
 
                                     <div class="tiny">
@@ -761,7 +726,7 @@
 
                                     <div>
 
-                                        <b style="font-size:10px;">
+                                        <b>
                                             Rahul Kumar
                                         </b>
 
@@ -773,18 +738,14 @@
 
                                 </div>
 
-
                                 <small>
                                     2h
                                 </small>
 
-
                             </div>
 
 
-
                             <div class="activity-row">
-
 
                                 <div class="person">
 
@@ -794,7 +755,7 @@
 
                                     <div>
 
-                                        <b style="font-size:10px;">
+                                        <b>
                                             Priya Singh
                                         </b>
 
@@ -806,11 +767,9 @@
 
                                 </div>
 
-
                                 <small>
                                     4h
                                 </small>
-
 
                             </div>
 
@@ -829,7 +788,7 @@
 
 
             <!-- =================================================
-                 PEOPLE
+                 EMPLOYEES
                  ================================================= -->
 
             <div
@@ -843,7 +802,7 @@
                     <div>
 
                         <h1>
-                            People
+                            Employees
                         </h1>
 
                         <p>
@@ -851,6 +810,14 @@
                         </p>
 
                     </div>
+
+
+                    <button
+                        class="primary"
+                        onclick="toast('Add employee form will open here')"
+                    >
+                        + Add Employee
+                    </button>
 
                 </div>
 
@@ -952,7 +919,6 @@
 
                     <div class="card-title">
 
-
                         <h3>
                             Employee Directory
                         </h3>
@@ -964,20 +930,16 @@
                                 type="text"
                                 id="empSearch"
                                 placeholder="Search employee..."
-                                oninput="filterEmployees()"
                             >
 
                         </div>
 
-
                     </div>
 
 
-                    <div style="overflow-x:auto">
-
+                    <div class="table-scroll">
 
                         <table class="table">
-
 
                             <thead>
 
@@ -1161,9 +1123,7 @@
 
                             </tbody>
 
-
                         </table>
-
 
                     </div>
 
@@ -1195,7 +1155,7 @@
                         </h1>
 
                         <p>
-                            Payroll processing and payment status
+                            Payroll processing, tax settings and payments
                         </p>
 
                     </div>
@@ -1203,11 +1163,9 @@
 
                     <button
                         class="primary"
-                        onclick="toast('Payroll processing started')"
+                        onclick="runPayroll()"
                     >
-
                         + Run Payroll
-
                     </button>
 
 
@@ -1314,6 +1272,128 @@
 
 
 
+                <!-- TAX SETTINGS -->
+
+                <div class="card tax-settings">
+
+
+                    <div class="card-title">
+
+                        <div>
+
+                            <h3>
+                                Tax Settings
+                            </h3>
+
+                            <p class="card-subtitle">
+                                Configure payroll tax rules by country
+                            </p>
+
+                        </div>
+
+
+                        <select id="countrySelect" class="select-input">
+
+                            <option value="india">
+                                India
+                            </option>
+
+                            <option value="usa">
+                                United States
+                            </option>
+
+                            <option value="uk">
+                                United Kingdom
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="tax-grid">
+
+
+                        <div class="tax-option">
+
+                            <span>
+                                PF
+                            </span>
+
+                            <div>
+
+                                <b>
+                                    Provident Fund
+                                </b>
+
+                                <small>
+                                    India payroll contribution
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tax-option">
+
+                            <span>
+                                PT
+                            </span>
+
+                            <div>
+
+                                <b>
+                                    Professional Tax
+                                </b>
+
+                                <small>
+                                    State professional tax
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tax-option">
+
+                            <span>
+                                TAX
+                            </span>
+
+                            <div>
+
+                                <b>
+                                    Income Tax
+                                </b>
+
+                                <small>
+                                    Employee tax deduction
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <button
+                        class="secondary"
+                        id="taxSave"
+                    >
+                        Save Tax Settings
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- PAYROLL RECORDS -->
+
                 <div class="card table-card">
 
 
@@ -1330,8 +1410,7 @@
                     </div>
 
 
-                    <div style="overflow-x:auto">
-
+                    <div class="table-scroll">
 
                         <table class="table">
 
@@ -1454,7 +1533,6 @@
 
                         </table>
 
-
                     </div>
 
 
@@ -1466,7 +1544,7 @@
 
 
             <!-- =================================================
-                 REPORTS & ANALYSIS
+                 REPORTS & ANALYTICS
                  ================================================= -->
 
             <div
@@ -1475,15 +1553,13 @@
             >
 
 
-                <!-- REPORTS HEADER -->
-
                 <div class="heading">
 
 
                     <div>
 
                         <h1>
-                            Reports & Analysis
+                            Reports & Analytics
                         </h1>
 
                         <p>
@@ -1608,7 +1684,7 @@
 
 
 
-                <!-- MONTHLY PAYROLL TREND -->
+                <!-- MONTHLY TREND -->
 
                 <div class="card table-card">
 
@@ -1633,50 +1709,27 @@
 
 
                             <div class="bar-group">
-                                <div
-                                    class="bar"
-                                    style="height:55%"
-                                ></div>
+                                <div class="bar" style="height:55%"></div>
                             </div>
 
-
                             <div class="bar-group">
-                                <div
-                                    class="bar"
-                                    style="height:61%"
-                                ></div>
+                                <div class="bar" style="height:61%"></div>
                             </div>
 
-
                             <div class="bar-group">
-                                <div
-                                    class="bar"
-                                    style="height:68%"
-                                ></div>
+                                <div class="bar" style="height:68%"></div>
                             </div>
 
-
                             <div class="bar-group">
-                                <div
-                                    class="bar"
-                                    style="height:73%"
-                                ></div>
+                                <div class="bar" style="height:73%"></div>
                             </div>
 
-
                             <div class="bar-group">
-                                <div
-                                    class="bar"
-                                    style="height:78%"
-                                ></div>
+                                <div class="bar" style="height:78%"></div>
                             </div>
 
-
                             <div class="bar-group">
-                                <div
-                                    class="bar"
-                                    style="height:84%"
-                                ></div>
+                                <div class="bar" style="height:84%"></div>
                             </div>
 
 
@@ -1702,15 +1755,12 @@
 
 
 
-                <!-- =================================================
-                     AI ANALYSIS
-                     ================================================= -->
+                <!-- AI ANALYSIS -->
 
                 <div class="analysis-section">
 
 
                     <div class="heading">
-
 
                         <div>
 
@@ -1724,12 +1774,9 @@
 
                         </div>
 
-
                     </div>
 
 
-
-                    <!-- AI KPI CARDS -->
 
                     <div class="cards">
 
@@ -1806,8 +1853,6 @@
 
 
 
-                    <!-- FORECAST + RECOMMENDATIONS -->
-
                     <div class="grid2">
 
 
@@ -1832,66 +1877,29 @@
 
                                 <div class="bars">
 
-
                                     <div class="bar-group">
-
-                                        <div
-                                            class="bar"
-                                            style="height:54%"
-                                        ></div>
-
+                                        <div class="bar" style="height:54%"></div>
                                     </div>
 
-
                                     <div class="bar-group">
-
-                                        <div
-                                            class="bar"
-                                            style="height:62%"
-                                        ></div>
-
+                                        <div class="bar" style="height:62%"></div>
                                     </div>
 
-
                                     <div class="bar-group">
-
-                                        <div
-                                            class="bar"
-                                            style="height:68%"
-                                        ></div>
-
+                                        <div class="bar" style="height:68%"></div>
                                     </div>
 
-
                                     <div class="bar-group">
-
-                                        <div
-                                            class="bar"
-                                            style="height:74%"
-                                        ></div>
-
+                                        <div class="bar" style="height:74%"></div>
                                     </div>
 
-
                                     <div class="bar-group">
-
-                                        <div
-                                            class="bar"
-                                            style="height:82%"
-                                        ></div>
-
+                                        <div class="bar" style="height:82%"></div>
                                     </div>
 
-
                                     <div class="bar-group">
-
-                                        <div
-                                            class="bar"
-                                            style="height:88%"
-                                        ></div>
-
+                                        <div class="bar" style="height:88%"></div>
                                     </div>
-
 
                                 </div>
 
@@ -1914,8 +1922,6 @@
                         </div>
 
 
-
-                        <!-- RECOMMENDATIONS -->
 
                         <div class="card ai">
 
@@ -1973,8 +1979,6 @@
 
 
 
-                    <!-- FORECAST DRIVERS -->
-
                     <div class="card table-card">
 
 
@@ -1999,11 +2003,8 @@
 
                         </div>
 
-
                         <div class="kpi-line">
-
                             <span style="width:78%"></span>
-
                         </div>
 
 
@@ -2019,11 +2020,8 @@
 
                         </div>
 
-
                         <div class="kpi-line">
-
                             <span style="width:52%"></span>
-
                         </div>
 
 
@@ -2039,11 +2037,8 @@
 
                         </div>
 
-
                         <div class="kpi-line">
-
                             <span style="width:34%"></span>
-
                         </div>
 
 
@@ -2058,7 +2053,7 @@
 
 
             <!-- =================================================
-                 AI AGENT
+                 INSIGHTS AGENT
                  ================================================= -->
 
             <div
@@ -2073,7 +2068,7 @@
                     <div>
 
                         <h1>
-                            AI Agent
+                            Insights Agent
                         </h1>
 
                         <p>
@@ -2106,7 +2101,6 @@
 
                         <div class="ai-agent-header">
 
-
                             <div class="ai-agent-avatar">
                                 ✦
                             </div>
@@ -2119,11 +2113,10 @@
                                 </h3>
 
                                 <p>
-                                    I can help you navigate and manage your dashboard.
+                                    Ask me to navigate or find information.
                                 </p>
 
                             </div>
-
 
                         </div>
 
@@ -2145,26 +2138,15 @@
 
                                 <div class="message-content">
 
-
                                     <b>
                                         PayrollPixel AI
                                     </b>
 
-
                                     <p>
-
                                         Hi! Tell me what you want to do.
-                                        For example, you can say
-                                        <strong>
-                                            "Show employees"
-                                        </strong>
-                                        or
-                                        <strong>
-                                            "Open payroll"
-                                        </strong>.
-
+                                        Try "Show employees", "Open payroll",
+                                        "Show reports" or "Open company profile".
                                     </p>
-
 
                                 </div>
 
@@ -2220,16 +2202,12 @@
                         </div>
 
 
-
                         <button
                             class="agent-command"
                             data-command="Show employees"
                         >
 
-                            <span>
-                                ♙
-                            </span>
-
+                            <span>♙</span>
 
                             <div>
 
@@ -2243,9 +2221,7 @@
 
                             </div>
 
-
                         </button>
-
 
 
                         <button
@@ -2253,10 +2229,7 @@
                             data-command="Open payroll"
                         >
 
-                            <span>
-                                ₹
-                            </span>
-
+                            <span>₹</span>
 
                             <div>
 
@@ -2265,14 +2238,12 @@
                                 </b>
 
                                 <small>
-                                    View payroll records
+                                    View payroll and tax settings
                                 </small>
 
                             </div>
 
-
                         </button>
-
 
 
                         <button
@@ -2280,15 +2251,12 @@
                             data-command="Open reports"
                         >
 
-                            <span>
-                                ▤
-                            </span>
-
+                            <span>▤</span>
 
                             <div>
 
                                 <b>
-                                    Open Reports & Analysis
+                                    Open Reports & Analytics
                                 </b>
 
                                 <small>
@@ -2297,9 +2265,7 @@
 
                             </div>
 
-
                         </button>
-
 
 
                         <button
@@ -2307,10 +2273,7 @@
                             data-command="Show AI forecasting"
                         >
 
-                            <span>
-                                ✦
-                            </span>
-
+                            <span>✦</span>
 
                             <div>
 
@@ -2319,65 +2282,54 @@
                                 </b>
 
                                 <small>
-                                    Open AI predictions
+                                    View payroll predictions
                                 </small>
 
                             </div>
-
 
                         </button>
 
 
-
                         <button
                             class="agent-command"
-                            data-command="Open settings"
+                            data-command="Open company profile"
                         >
 
-                            <span>
-                                ⚙
-                            </span>
-
+                            <span>◉</span>
 
                             <div>
 
                                 <b>
-                                    Open settings
+                                    Company profile
                                 </b>
 
                                 <small>
-                                    Manage dashboard settings
+                                    Open company information
                                 </small>
 
                             </div>
-
 
                         </button>
 
 
-
                         <button
                             class="agent-command"
-                            data-command="Go to dashboard"
+                            data-command="Open integrations"
                         >
 
-                            <span>
-                                ▦
-                            </span>
-
+                            <span>⌘</span>
 
                             <div>
 
                                 <b>
-                                    Go to dashboard
+                                    Integrations
                                 </b>
 
                                 <small>
-                                    Return to dashboard
+                                    Manage connected services
                                 </small>
 
                             </div>
-
 
                         </button>
 
@@ -2389,8 +2341,6 @@
 
 
 
-                <!-- CAPABILITIES -->
-
                 <div class="card ai-agent-info">
 
 
@@ -2401,7 +2351,7 @@
                         </h3>
 
                         <span>
-                            AI Agent
+                            Insights Agent
                         </span>
 
                     </div>
@@ -2411,67 +2361,249 @@
 
 
                         <div>
-
-                            <span>
-                                ✦
-                            </span>
-
+                            <span>✦</span>
                             Navigate dashboard pages
-
                         </div>
 
 
                         <div>
-
-                            <span>
-                                ⌕
-                            </span>
-
+                            <span>⌕</span>
                             Search employees
-
                         </div>
 
 
                         <div>
-
-                            <span>
-                                ▤
-                            </span>
-
+                            <span>▤</span>
                             Open reports
-
                         </div>
 
 
                         <div>
-
-                            <span>
-                                ₹
-                            </span>
-
+                            <span>₹</span>
                             Access payroll
-
                         </div>
 
 
                         <div>
-
-                            <span>
-                                ⚙
-                            </span>
-
-                            Open settings
-
+                            <span>◉</span>
+                            Open company profile
                         </div>
 
 
                         <div>
+                            <span>⌘</span>
+                            Open integrations
+                        </div>
 
-                            <span>
-                                ◈
-                            </span>
 
-                            Understand natural-language commands
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 COMPANY PROFILE
+                 ================================================= -->
+
+            <div
+                class="page"
+                id="page-company-profile"
+            >
+
+
+                <div class="heading">
+
+                    <div>
+
+                        <h1>
+                            Company Profile
+                        </h1>
+
+                        <p>
+                            Manage company information and payroll preferences
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary"
+                        id="companySave"
+                    >
+                        Save Changes
+                    </button>
+
+                </div>
+
+
+
+                <div class="settings-grid">
+
+
+                    <div class="card">
+
+
+                        <div class="card-title">
+
+                            <h3>
+                                Company Information
+                            </h3>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Company Name
+                                </label>
+
+                                <input
+                                    id="companyName"
+                                    value="PayrollPixel Technologies"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Industry
+                                </label>
+
+                                <input
+                                    value="Technology"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Company Email
+                                </label>
+
+                                <input
+                                    value="admin@payrollpixel.ai"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Country
+                                </label>
+
+                                <select>
+
+                                    <option>
+                                        India
+                                    </option>
+
+                                    <option>
+                                        United States
+                                    </option>
+
+                                    <option>
+                                        United Kingdom
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="card">
+
+
+                        <div class="card-title">
+
+                            <h3>
+                                Currency
+                            </h3>
+
+                        </div>
+
+
+                        <div class="currency-options">
+
+
+                            <label class="currency-option">
+
+                                <input
+                                    type="radio"
+                                    name="currency"
+                                    value="INR"
+                                    checked
+                                >
+
+                                <span>
+                                    ₹ INR
+                                </span>
+
+                                <small>
+                                    Indian Rupee
+                                </small>
+
+                            </label>
+
+
+                            <label class="currency-option">
+
+                                <input
+                                    type="radio"
+                                    name="currency"
+                                    value="USD"
+                                >
+
+                                <span>
+                                    $ USD
+                                </span>
+
+                                <small>
+                                    US Dollar
+                                </small>
+
+                            </label>
+
+
+                            <label class="currency-option">
+
+                                <input
+                                    type="radio"
+                                    name="currency"
+                                    value="GBP"
+                                >
+
+                                <span>
+                                    £ GBP
+                                </span>
+
+                                <small>
+                                    British Pound
+                                </small>
+
+                            </label>
+
 
                         </div>
 
@@ -2487,12 +2619,12 @@
 
 
             <!-- =================================================
-                 SETTINGS
+                 USERS & ROLES
                  ================================================= -->
 
             <div
                 class="page"
-                id="page-settings"
+                id="page-users-roles"
             >
 
 
@@ -2502,11 +2634,177 @@
                     <div>
 
                         <h1>
-                            Settings
+                            Users & Roles
                         </h1>
 
                         <p>
-                            Manage company and notification settings
+                            Manage dashboard users and permissions
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary"
+                        onclick="toast('Add user form will open here')"
+                    >
+                        + Add User
+                    </button>
+
+
+                </div>
+
+
+
+                <div class="card table-card">
+
+
+                    <div class="table-scroll">
+
+
+                        <table class="table">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        User
+                                    </th>
+
+                                    <th>
+                                        Email
+                                    </th>
+
+                                    <th>
+                                        Role
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>
+                                        Ankit Kumar
+                                    </td>
+
+                                    <td>
+                                        admin@payrollpixel.ai
+                                    </td>
+
+                                    <td>
+                                        Administrator
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status paid">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Rahul Kumar
+                                    </td>
+
+                                    <td>
+                                        rahul@payrollpixel.ai
+                                    </td>
+
+                                    <td>
+                                        Payroll Manager
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status paid">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Priya Singh
+                                    </td>
+
+                                    <td>
+                                        priya@payrollpixel.ai
+                                    </td>
+
+                                    <td>
+                                        HR Manager
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+
+                        </table>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INTEGRATIONS
+                 ================================================= -->
+
+            <div
+                class="page"
+                id="page-integrations"
+            >
+
+
+                <div class="heading">
+
+
+                    <div>
+
+                        <h1>
+                            Integrations
+                        </h1>
+
+                        <p>
+                            Connect PayrollPixel with external services
                         </p>
 
                     </div>
@@ -2516,109 +2814,101 @@
 
 
 
-                <div class="grid2">
+                <div class="integration-grid">
 
 
-                    <div class="card">
+                    <div class="card integration-card">
 
-
-                        <div class="card-title">
-
-                            <h3>
-                                Company Profile
-                            </h3>
-
+                        <div class="integration-icon">
+                            G
                         </div>
 
+                        <h3>
+                            Google Workspace
+                        </h3>
 
-                        <div class="metric-row">
-
-                            <span>
-                                Company Name
-                            </span>
-
-                            <b>
-                                PayrollPixel Technologies
-                            </b>
-
-                        </div>
-
-
-                        <div class="metric-row">
-
-                            <span>
-                                Employees
-                            </span>
-
-                            <b>
-                                248
-                            </b>
-
-                        </div>
-
-
-                        <div class="metric-row">
-
-                            <span>
-                                Payroll Cycle
-                            </span>
-
-                            <b>
-                                Monthly
-                            </b>
-
-                        </div>
-
+                        <p>
+                            Connect employee and company productivity tools.
+                        </p>
 
                         <button
-                            class="primary"
-                            onclick="toast('Company profile saved')"
+                            class="secondary"
+                            onclick="toast('Google Workspace connection coming soon')"
                         >
-
-                            Save Changes
-
+                            Connect
                         </button>
-
 
                     </div>
 
 
+                    <div class="card integration-card">
 
-                    <div class="card">
-
-
-                        <div class="card-title">
-
-                            <h3>
-                                Notifications
-                            </h3>
-
+                        <div class="integration-icon">
+                            S
                         </div>
 
+                        <h3>
+                            Slack
+                        </h3>
 
-                        <div
-                            class="insight"
-                            style="color:var(--text)"
+                        <p>
+                            Receive payroll and workforce notifications.
+                        </p>
+
+                        <button
+                            class="secondary"
+                            onclick="toast('Slack connection coming soon')"
                         >
-                            Payroll processing notifications
+                            Connect
+                        </button>
+
+                    </div>
+
+
+                    <div class="card integration-card">
+
+                        <div class="integration-icon">
+                            B
                         </div>
 
+                        <h3>
+                            Banking
+                        </h3>
 
-                        <div
-                            class="insight"
-                            style="color:var(--text)"
+                        <p>
+                            Connect payroll payment services.
+                        </p>
+
+                        <button
+                            class="secondary"
+                            onclick="toast('Banking integration coming soon')"
                         >
-                            AI forecast alerts
+                            Connect
+                        </button>
+
+                    </div>
+
+
+                    <div class="card integration-card">
+
+                        <div class="integration-icon">
+                            A
                         </div>
 
+                        <h3>
+                            Accounting
+                        </h3>
 
-                        <div
-                            class="insight"
-                            style="color:var(--text)"
+                        <p>
+                            Sync payroll information with accounting software.
+                        </p>
+
+                        <button
+                            class="secondary"
+                            onclick="toast('Accounting integration coming soon')"
                         >
-                            Employee activity alerts
-                        </div>
-
+                            Connect
+                        </button>
 
                     </div>
 
@@ -2639,9 +2929,7 @@
 
 
 
-<!-- =========================================================
-     TOAST
-     ========================================================= -->
+<!-- TOAST -->
 
 <div
     class="toast"
