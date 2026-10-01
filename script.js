@@ -4,9 +4,12 @@
    ========================================================= */
 
 
-/* ================= NAVIGATION ================= */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 const buttons = document.querySelectorAll('.nav button');
+
 const pages = document.querySelectorAll('.page');
 
 
@@ -14,14 +17,18 @@ buttons.forEach(button => {
 
     button.addEventListener('click', () => {
 
-        navigateToPage(button.dataset.page);
+        navigateToPage(
+            button.dataset.page
+        );
 
     });
 
 });
 
 
-function navigateToPage(pageName) {
+function navigateToPage(pageName){
+
+    /* Remove active from all buttons */
 
     buttons.forEach(button => {
 
@@ -30,17 +37,22 @@ function navigateToPage(pageName) {
     });
 
 
-    const activeButton = document.querySelector(
-        `.nav button[data-page="${pageName}"]`
-    );
+    /* Add active to selected button */
+
+    const activeButton =
+        document.querySelector(
+            `.nav button[data-page="${pageName}"]`
+        );
 
 
-    if (activeButton) {
+    if(activeButton){
 
         activeButton.classList.add('active');
 
     }
 
+
+    /* Hide all pages */
 
     pages.forEach(page => {
 
@@ -49,94 +61,138 @@ function navigateToPage(pageName) {
     });
 
 
-    const targetPage = document.getElementById(
-        'page-' + pageName
-    );
+    /* Show selected page */
+
+    const targetPage =
+        document.getElementById(
+            'page-' + pageName
+        );
 
 
-    if (targetPage) {
+    if(targetPage){
 
         targetPage.classList.add('active');
 
     }
 
 
-    const sidebar = document.getElementById('sidebar');
+    /* Close mobile sidebar */
 
-    if (sidebar) {
+    const sidebar =
+        document.getElementById('sidebar');
+
+
+    if(sidebar){
 
         sidebar.classList.remove('open');
 
     }
 
 
+    /* Scroll to top */
+
     window.scrollTo({
 
-        top: 0,
-        behavior: 'smooth'
+        top:0,
+        behavior:'smooth'
 
     });
 
 }
 
 
-/* ================= MOBILE MENU ================= */
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
-const menu = document.getElementById('menu');
+const menu =
+    document.getElementById('menu');
 
-if (menu) {
 
-    menu.addEventListener('click', () => {
+if(menu){
 
-        document
-            .getElementById('sidebar')
-            .classList.toggle('open');
+    menu.addEventListener(
+        'click',
+        () => {
 
-    });
+            document
+                .getElementById('sidebar')
+                .classList.toggle('open');
+
+        }
+    );
 
 }
 
 
-/* ================= TOAST ================= */
+/* =========================================================
+   TOAST
+   ========================================================= */
 
-function toast(msg) {
+function toast(msg){
 
-    const t = document.getElementById('toast');
+    const t =
+        document.getElementById('toast');
 
-    if (!t) return;
+
+    if(!t){
+
+        return;
+
+    }
 
 
-    t.textContent = msg;
+    t.textContent =
+        msg;
+
 
     t.classList.add('show');
 
 
-    clearTimeout(window.__t);
+    clearTimeout(
+        window.__t
+    );
 
 
-    window.__t = setTimeout(() => {
+    window.__t =
+        setTimeout(() => {
 
-        t.classList.remove('show');
+            t.classList.remove('show');
 
-    }, 2200);
+        },2200);
 
 }
 
 
-/* ================= EMPLOYEE SEARCH ================= */
+/* =========================================================
+   EMPLOYEE SEARCH
+   ========================================================= */
 
-function filterEmployees() {
+function filterEmployees(){
 
-    const input = document.getElementById('empSearch');
+    const input =
+        document.getElementById(
+            'empSearch'
+        );
 
-    if (!input) return;
+
+    if(!input){
+
+        return;
+
+    }
 
 
-    const q = input.value.toLowerCase();
+    const q =
+        input.value
+            .toLowerCase()
+            .trim();
 
 
     document
-        .querySelectorAll('#empBody tr')
+        .querySelectorAll(
+            '#empBody tr'
+        )
         .forEach(row => {
 
             row.style.display =
@@ -151,134 +207,206 @@ function filterEmployees() {
 }
 
 
-/* ================= GLOBAL SEARCH ================= */
+/* =========================================================
+   GLOBAL SEARCH
+   ========================================================= */
 
 const globalSearch =
-    document.getElementById('globalSearch');
+    document.getElementById(
+        'globalSearch'
+    );
 
 
-if (globalSearch) {
+if(globalSearch){
 
-    globalSearch.addEventListener('keydown', e => {
+    globalSearch.addEventListener(
+        'keydown',
+        e => {
 
-        if (e.key !== 'Enter') return;
+            if(e.key !== 'Enter'){
 
+                return;
 
-        const q = e.target.value
-            .trim()
-            .toLowerCase();
-
-
-        if (!q) return;
+            }
 
 
-        if (
-            q.includes('employee') ||
-            q.includes('employees') ||
-            q.includes('people') ||
-            q.includes('person')
-        ) {
+            const q =
+                e.target.value
+                    .trim()
+                    .toLowerCase();
 
-            navigateToPage('employees');
+
+            if(!q){
+
+                return;
+
+            }
+
+
+            /* Dashboard */
+
+            if(
+                q.includes('dashboard') ||
+                q.includes('home') ||
+                q.includes('overview')
+            ){
+
+                navigateToPage(
+                    'dashboard'
+                );
+
+                return;
+
+            }
+
+
+            /* Employees */
+
+            if(
+                q.includes('employee') ||
+                q.includes('employees') ||
+                q.includes('people') ||
+                q.includes('staff')
+            ){
+
+                navigateToPage(
+                    'employees'
+                );
+
+                return;
+
+            }
+
+
+            /* Payroll */
+
+            if(
+                q.includes('payroll') ||
+                q.includes('salary') ||
+                q.includes('payment')
+            ){
+
+                navigateToPage(
+                    'payroll'
+                );
+
+                return;
+
+            }
+
+
+            /* Reports + Analysis */
+
+            if(
+                q.includes('report') ||
+                q.includes('reports') ||
+                q.includes('analysis') ||
+                q.includes('analytics') ||
+                q.includes('forecast') ||
+                q.includes('forecasting') ||
+                q.includes('prediction')
+            ){
+
+                navigateToPage(
+                    'reports'
+                );
+
+                return;
+
+            }
+
+
+            /* AI Agent */
+
+            if(
+                q.includes('agent') ||
+                q.includes('assistant')
+            ){
+
+                navigateToPage(
+                    'ai-agent'
+                );
+
+                return;
+
+            }
+
+
+            /* Settings */
+
+            if(
+                q.includes('setting') ||
+                q.includes('settings') ||
+                q.includes('configuration')
+            ){
+
+                navigateToPage(
+                    'settings'
+                );
+
+                return;
+
+            }
+
+
+            toast(
+                'No matching section found'
+            );
 
         }
-
-        else if (
-            q.includes('payroll') ||
-            q.includes('salary') ||
-            q.includes('payment')
-        ) {
-
-            navigateToPage('payroll');
-
-        }
-
-        else if (
-            q.includes('report') ||
-            q.includes('reports')
-        ) {
-
-            navigateToPage('reports');
-
-        }
-
-        else if (
-            q.includes('forecast') ||
-            q.includes('forecasting') ||
-            q.includes('prediction')
-        ) {
-
-            navigateToPage('ai');
-
-        }
-
-        else if (
-            q.includes('agent') ||
-            q.includes('assistant')
-        ) {
-
-            navigateToPage('ai-agent');
-
-        }
-
-        else if (
-            q.includes('setting') ||
-            q.includes('settings')
-        ) {
-
-            navigateToPage('settings');
-
-        }
-
-        else if (
-            q.includes('dashboard') ||
-            q.includes('home')
-        ) {
-
-            navigateToPage('dashboard');
-
-        }
-
-        else {
-
-            toast('No matching section found');
-
-        }
-
-    });
+    );
 
 }
 
 
 /* =========================================================
-   AI AGENT
+   AI AGENT ELEMENTS
    ========================================================= */
 
-
-/* ================= ELEMENTS ================= */
-
 const aiAgentInput =
-    document.getElementById('aiAgentInput');
+    document.getElementById(
+        'aiAgentInput'
+    );
+
 
 const aiAgentSend =
-    document.getElementById('aiAgentSend');
+    document.getElementById(
+        'aiAgentSend'
+    );
+
 
 const aiAgentMessages =
-    document.getElementById('aiAgentMessages');
+    document.getElementById(
+        'aiAgentMessages'
+    );
+
 
 const agentCommands =
-    document.querySelectorAll('.agent-command');
+    document.querySelectorAll(
+        '.agent-command'
+    );
 
 
-/* ================= ADD MESSAGE ================= */
+/* =========================================================
+   ADD AI MESSAGE
+   ========================================================= */
 
-function addAgentMessage(message, type = 'agent') {
+function addAgentMessage(
+    message,
+    type='agent'
+){
 
-    if (!aiAgentMessages) return;
+    if(!aiAgentMessages){
+
+        return;
+
+    }
 
 
     const wrapper =
-        document.createElement('div');
+        document.createElement(
+            'div'
+        );
 
 
     wrapper.className =
@@ -286,7 +414,9 @@ function addAgentMessage(message, type = 'agent') {
 
 
     const avatar =
-        document.createElement('div');
+        document.createElement(
+            'div'
+        );
 
 
     avatar.className =
@@ -300,7 +430,9 @@ function addAgentMessage(message, type = 'agent') {
 
 
     const content =
-        document.createElement('div');
+        document.createElement(
+            'div'
+        );
 
 
     content.className =
@@ -308,7 +440,9 @@ function addAgentMessage(message, type = 'agent') {
 
 
     const name =
-        document.createElement('b');
+        document.createElement(
+            'b'
+        );
 
 
     name.textContent =
@@ -318,24 +452,38 @@ function addAgentMessage(message, type = 'agent') {
 
 
     const text =
-        document.createElement('p');
+        document.createElement(
+            'p'
+        );
 
 
     text.textContent =
         message;
 
 
-    content.appendChild(name);
-
-    content.appendChild(text);
-
-
-    wrapper.appendChild(avatar);
-
-    wrapper.appendChild(content);
+    content.appendChild(
+        name
+    );
 
 
-    aiAgentMessages.appendChild(wrapper);
+    content.appendChild(
+        text
+    );
+
+
+    wrapper.appendChild(
+        avatar
+    );
+
+
+    wrapper.appendChild(
+        content
+    );
+
+
+    aiAgentMessages.appendChild(
+        wrapper
+    );
 
 
     aiAgentMessages.scrollTop =
@@ -344,37 +492,51 @@ function addAgentMessage(message, type = 'agent') {
 }
 
 
-/* ================= TYPING INDICATOR ================= */
+/* =========================================================
+   TYPING INDICATOR
+   ========================================================= */
 
-function showTyping() {
+function showTyping(){
 
-    if (!aiAgentMessages) return;
+    if(!aiAgentMessages){
+
+        return;
+
+    }
 
 
     const wrapper =
-        document.createElement('div');
+        document.createElement(
+            'div'
+        );
 
 
     wrapper.className =
         'agent-message agent';
+
 
     wrapper.id =
         'agentTypingMessage';
 
 
     const avatar =
-        document.createElement('div');
+        document.createElement(
+            'div'
+        );
 
 
     avatar.className =
         'message-avatar';
+
 
     avatar.textContent =
         '✦';
 
 
     const content =
-        document.createElement('div');
+        document.createElement(
+            'div'
+        );
 
 
     content.className =
@@ -382,14 +544,20 @@ function showTyping() {
 
 
     const name =
-        document.createElement('b');
+        document.createElement(
+            'b'
+        );
+
 
     name.textContent =
         'PayrollPixel AI';
 
 
     const typing =
-        document.createElement('div');
+        document.createElement(
+            'div'
+        );
+
 
     typing.className =
         'agent-typing';
@@ -402,17 +570,29 @@ function showTyping() {
     `;
 
 
-    content.appendChild(name);
-
-    content.appendChild(typing);
-
-
-    wrapper.appendChild(avatar);
-
-    wrapper.appendChild(content);
+    content.appendChild(
+        name
+    );
 
 
-    aiAgentMessages.appendChild(wrapper);
+    content.appendChild(
+        typing
+    );
+
+
+    wrapper.appendChild(
+        avatar
+    );
+
+
+    wrapper.appendChild(
+        content
+    );
+
+
+    aiAgentMessages.appendChild(
+        wrapper
+    );
 
 
     aiAgentMessages.scrollTop =
@@ -421,7 +601,7 @@ function showTyping() {
 }
 
 
-function hideTyping() {
+function hideTyping(){
 
     const typing =
         document.getElementById(
@@ -429,7 +609,7 @@ function hideTyping() {
         );
 
 
-    if (typing) {
+    if(typing){
 
         typing.remove();
 
@@ -438,15 +618,19 @@ function hideTyping() {
 }
 
 
-/* ================= NORMALIZE COMMAND ================= */
+/* =========================================================
+   NORMALIZE COMMAND
+   ========================================================= */
 
-function normalizeCommand(command) {
+function normalizeCommand(
+    command
+){
 
     return command
         .toLowerCase()
         .trim()
-        .replace(/[?!.,]/g, '')
-        .replace(/\s+/g, ' ');
+        .replace(/[?!.,]/g,'')
+        .replace(/\s+/g,' ');
 
 }
 
@@ -455,74 +639,89 @@ function normalizeCommand(command) {
    AI COMMAND PROCESSOR
    ========================================================= */
 
-function processAICommand(command) {
+function processAICommand(
+    command
+){
 
     const q =
-        normalizeCommand(command);
+        normalizeCommand(
+            command
+        );
 
 
-    if (!q) {
+    if(!q){
 
         return {
+
             response:
                 'Please tell me what you want to do.'
+
         };
 
     }
 
 
-    /* ================= DASHBOARD ================= */
+    /* =====================================================
+       DASHBOARD
+       ===================================================== */
 
-    if (
+    if(
         q.includes('dashboard') ||
         q.includes('home') ||
         q.includes('overview') ||
         q.includes('go home')
-    ) {
+    ){
 
-        navigateToPage('dashboard');
+        navigateToPage(
+            'dashboard'
+        );
+
 
         return {
+
             response:
                 'Sure. I opened the Dashboard for you.'
+
         };
 
     }
 
 
-    /* ================= EMPLOYEES ================= */
+    /* =====================================================
+       EMPLOYEES
+       ===================================================== */
 
-    if (
+    if(
         q.includes('employee') ||
         q.includes('employees') ||
         q.includes('people') ||
         q.includes('workforce') ||
         q.includes('staff')
-    ) {
+    ){
 
-        navigateToPage('employees');
+        navigateToPage(
+            'employees'
+        );
 
-
-        /*
-         * If user mentioned a specific employee,
-         * automatically search for that employee.
-         */
 
         const employeeNames = [
+
             'rahul',
             'priya',
             'amit',
             'neha'
+
         ];
 
 
         const foundEmployee =
-            employeeNames.find(name =>
-                q.includes(name)
+            employeeNames.find(
+                name =>
+                    q.includes(name)
             );
 
 
-        if (foundEmployee) {
+        if(foundEmployee){
 
             const search =
                 document.getElementById(
@@ -530,10 +729,11 @@ function processAICommand(command) {
                 );
 
 
-            if (search) {
+            if(search){
 
                 search.value =
                     foundEmployee;
+
 
                 filterEmployees();
 
@@ -541,171 +741,198 @@ function processAICommand(command) {
 
 
             return {
+
                 response:
                     `I opened People and searched for "${foundEmployee}".`
+
             };
 
         }
 
 
         return {
+
             response:
                 'I opened the People section for you.'
+
         };
 
     }
 
 
-    /* ================= PAYROLL ================= */
+    /* =====================================================
+       PAYROLL
+       ===================================================== */
 
-    if (
+    if(
         q.includes('payroll') ||
         q.includes('salary') ||
         q.includes('salaries') ||
         q.includes('payment') ||
         q.includes('payments')
-    ) {
+    ){
 
-        navigateToPage('payroll');
+        navigateToPage(
+            'payroll'
+        );
 
 
         return {
+
             response:
                 'I opened Payroll. You can view payroll records and payment status here.'
+
         };
 
     }
 
 
-    /* ================= REPORTS ================= */
+    /* =====================================================
+       REPORTS + ANALYSIS
+       ===================================================== */
 
-    if (
+    if(
         q.includes('report') ||
         q.includes('reports') ||
-        q.includes('analytics')
-    ) {
-
-        navigateToPage('reports');
-
-
-        return {
-            response:
-                'I opened Reports. You can view payroll and workforce reports here.'
-        };
-
-    }
-
-
-    /* ================= AI FORECASTING ================= */
-
-    if (
+        q.includes('analysis') ||
+        q.includes('analytics') ||
         q.includes('forecast') ||
         q.includes('forecasting') ||
         q.includes('prediction') ||
-        q.includes('predict') ||
+        q.includes('predictions') ||
         q.includes('ai analysis') ||
         q.includes('ai insights')
-    ) {
+    ){
 
-        navigateToPage('ai');
+        navigateToPage(
+            'reports'
+        );
 
 
         return {
+
             response:
-                'I opened AI Forecasting & Analysis. Here you can view payroll predictions and recommendations.'
+                'I opened Reports & Analysis. You can view reports, payroll trends and AI-powered forecasts here.'
+
         };
 
     }
 
 
-    /* ================= SETTINGS ================= */
+    /* =====================================================
+       SETTINGS
+       ===================================================== */
 
-    if (
+    if(
         q.includes('setting') ||
         q.includes('settings') ||
         q.includes('configuration') ||
         q.includes('configure')
-    ) {
+    ){
 
-        navigateToPage('settings');
+        navigateToPage(
+            'settings'
+        );
 
 
         return {
+
             response:
                 'I opened Settings for you.'
+
         };
 
     }
 
 
-    /* ================= RUN PAYROLL ================= */
+    /* =====================================================
+       RUN PAYROLL
+       ===================================================== */
 
-    if (
+    if(
         q.includes('run payroll') ||
         q.includes('process payroll') ||
         q.includes('start payroll')
-    ) {
+    ){
 
-        navigateToPage('payroll');
+        navigateToPage(
+            'payroll'
+        );
 
 
         setTimeout(() => {
 
-            toast('Payroll processing started');
+            toast(
+                'Payroll processing started'
+            );
 
-        }, 300);
+        },300);
 
 
         return {
+
             response:
                 'I opened Payroll and started the payroll processing action.'
+
         };
 
     }
 
 
-    /* ================= OPEN AGENT ================= */
+    /* =====================================================
+       OPEN AI AGENT
+       ===================================================== */
 
-    if (
+    if(
         q.includes('open agent') ||
         q.includes('ai agent') ||
         q.includes('assistant')
-    ) {
+    ){
 
-        navigateToPage('ai-agent');
+        navigateToPage(
+            'ai-agent'
+        );
 
 
         return {
+
             response:
-                'You are already using the PayrollPixel AI Agent.'
+                'You are now using the PayrollPixel AI Agent.'
+
         };
 
     }
 
 
-    /* ================= HELP ================= */
+    /* =====================================================
+       HELP
+       ===================================================== */
 
-    if (
+    if(
         q === 'help' ||
         q.includes('what can you do') ||
         q.includes('what can you') ||
         q.includes('commands')
-    ) {
+    ){
 
         return {
+
             response:
-                'I can open Dashboard, People, Payroll, Reports, AI Forecasting and Settings. I can also search employees and start payroll processing.'
+                'I can open Dashboard, People, Payroll, Reports & Analysis and Settings. I can also search employees and start payroll processing.'
+
         };
 
     }
 
 
-    /* ================= UNKNOWN ================= */
+    /* =====================================================
+       UNKNOWN
+       ===================================================== */
 
     return {
 
         response:
-            `I understood your request as "${command}", but I don't have an action for it yet. Try commands like "Show employees", "Open payroll", "Open reports", or "Show AI forecasting".`
+            `I understood your request as "${command}", but I don't have an action for it yet. Try commands like "Show employees", "Open payroll", "Open reports", "Show AI forecasting", or "Go to dashboard".`
 
     };
 
@@ -716,9 +943,15 @@ function processAICommand(command) {
    SEND AI COMMAND
    ========================================================= */
 
-function sendAICommand(command = null) {
+function sendAICommand(
+    command=null
+){
 
-    if (!aiAgentInput) return;
+    if(!aiAgentInput){
+
+        return;
+
+    }
 
 
     const text =
@@ -727,8 +960,14 @@ function sendAICommand(command = null) {
             : aiAgentInput.value.trim();
 
 
-    if (!text) return;
+    if(!text){
 
+        return;
+
+    }
+
+
+    /* USER MESSAGE */
 
     addAgentMessage(
         text,
@@ -736,16 +975,18 @@ function sendAICommand(command = null) {
     );
 
 
-    aiAgentInput.value = '';
+    /* CLEAR INPUT */
 
+    aiAgentInput.value =
+        '';
+
+
+    /* SHOW TYPING */
 
     showTyping();
 
 
-    /*
-     * Small delay makes the frontend
-     * feel like an AI assistant.
-     */
+    /* AI RESPONSE */
 
     setTimeout(() => {
 
@@ -753,7 +994,9 @@ function sendAICommand(command = null) {
 
 
         const result =
-            processAICommand(text);
+            processAICommand(
+                text
+            );
 
 
         addAgentMessage(
@@ -762,14 +1005,16 @@ function sendAICommand(command = null) {
         );
 
 
-    }, 550);
+    },550);
 
 }
 
 
-/* ================= SEND BUTTON ================= */
+/* =========================================================
+   SEND BUTTON
+   ========================================================= */
 
-if (aiAgentSend) {
+if(aiAgentSend){
 
     aiAgentSend.addEventListener(
         'click',
@@ -783,15 +1028,17 @@ if (aiAgentSend) {
 }
 
 
-/* ================= ENTER KEY ================= */
+/* =========================================================
+   ENTER KEY
+   ========================================================= */
 
-if (aiAgentInput) {
+if(aiAgentInput){
 
     aiAgentInput.addEventListener(
         'keydown',
         e => {
 
-            if (e.key === 'Enter') {
+            if(e.key === 'Enter'){
 
                 e.preventDefault();
 
@@ -805,34 +1052,48 @@ if (aiAgentInput) {
 }
 
 
-/* ================= SUGGESTED COMMANDS ================= */
+/* =========================================================
+   SUGGESTED COMMANDS
+   ========================================================= */
 
-agentCommands.forEach(button => {
+agentCommands.forEach(
+    button => {
 
-    button.addEventListener(
-        'click',
-        () => {
+        button.addEventListener(
+            'click',
+            () => {
 
-            const command =
-                button.dataset.command;
+                const command =
+                    button.dataset.command;
 
 
-            if (command) {
+                if(command){
 
-                sendAICommand(command);
+                    sendAICommand(
+                        command
+                    );
+
+                }
 
             }
+        );
 
-        }
-    );
-
-});
+    }
+);
 
 
 /* =========================================================
-   WELCOME MESSAGE
+   INITIALIZE
    ========================================================= */
 
 console.log(
-    'PayrollPixel AI Agent initialized successfully.'
+    'PayrollPixel AI initialized successfully.'
+);
+
+console.log(
+    'Reports & Analysis module initialized.'
+);
+
+console.log(
+    'AI Agent initialized successfully.'
 );
